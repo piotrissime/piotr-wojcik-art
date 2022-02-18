@@ -1,0 +1,14 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-header__menu {
+    display: flex;
+    gap: 42px;
+}
+
+.active {
+    background: rgba(201, 201, 201, 0.651);
+}
