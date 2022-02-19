@@ -1,7 +1,7 @@
 .main-header {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    margin-right: 150px;
 }
 
 .main-header__menu {
@@ -9,6 +9,10 @@
     gap: 42px;
 }
 
+.main-header__menu a:hover {
+    opacity: 0.5;
+}
+
 .active {
-    background: rgba(201, 201, 201, 0.651);
+    border-bottom: 2px solid white;
 }

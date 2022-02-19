@@ -1,0 +1,31 @@
+.home-main-content {
+    padding-left: 50px;
+}
+
+.home-main-content {
+    display: flex;
+}
+.home-main-content img {
+    position: relative;
+    width: 580px;
+    top: 100px;
+    right: 100px;
+    z-index: -1;
+    box-shadow: 6px 7px 9px -7px rgba(59,59,59,0.75);
+}
+
+.home-main-footer {
+    position: absolute;
+    bottom: 0;
+    right: 42px;
+}
+
+.home-main-footer__social-icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.home-main-footer__social-icons li:hover {
+    opacity: 0.5;
+}
