@@ -1,0 +1,9 @@
+# Node dependencies
+node_modules
+CHANGELOG.md
+
+# Dist folder
+dist
+
+# CSS
+style

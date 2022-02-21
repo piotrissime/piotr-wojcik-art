@@ -1,23 +1,21 @@
 // IMPORT FUNCTIONS
 
-// Home page
-// import { initHome } from './pages/home.js';
-
-// Page 1
-// import initPage1 from './pages/page1.js';
+// Gallery page
+import { initGallery } from './pages/gallery';
+import { initContact } from './pages/contact';
 
 // CALL FUNCTIONS
-/*
+
 const main = async () => {
     switch (window.location.pathname.split('/').pop()) {
-        case '':
-        case 'index.html':
-            await initHome();
+        case 'galerie.html':
+            await initGallery();
             break;
-        case 'page1.html':
-            await initPage1();
+
+        case 'contact.html':
+            await initContact();
             break;
     }
 };
 
-main(); */
+main();

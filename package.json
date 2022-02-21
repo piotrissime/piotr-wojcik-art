@@ -3,9 +3,30 @@
   "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
-    "sass": "^1.49.8"
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-polyfill": "^6.26.0",
+    "sass": "^1.49.8",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "sass": "sass --watch src/scss/main.scss:style/main.css"
+    "sass": "sass --watch src/scss/main.scss:style/main.css",
+    "build": "webpack",
+    "prepare": "husky install",
+    "start": "webpack serve"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
