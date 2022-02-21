@@ -96,4 +96,31 @@ svg path {
   opacity: 0.5;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  justify-content: center;
+  gap: 40px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.gallery img {
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-footer__social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.main-footer__social-icons li:hover {
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=main.css.map */
