@@ -95,6 +95,7 @@ const filterMedias = () => {
             }
             displayedMedias = medias;
         }
+        enableLightbox();
     };
 
     for (const iterator of filterButtons) {
