@@ -4,6 +4,10 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <!-- CSS style -->
         <link href="../style/main.css" rel="stylesheet" type="text/css" />
         <!-- JavaScript (development) -->
@@ -23,7 +27,25 @@
             </nav>
         </header>
         <main>
-            <h1>Contact</h1>
+            <h1 class="contact-title">Me contacter</h1>
+            <p class="contact-info">Si vous avez des questions, c'est par ici que cela se passe !</p>
+            <div class="contact-form">
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                      <label>Votre nom : <input type="text" name="name" required/></label>   
+                    </p>
+                    <p>
+                      <label>Votre Email: <input type="email" name="email" required/></label>
+                    </p>
+                    <p>
+                      <label>Votre message: <textarea name="message" required></textarea></label>
+                    </p>
+                    <p>
+                      <button type="submit">Envoyer</button>
+                    </p>
+                  </form>
+            </div>
+              
         </main>
     </body>
 </html>
