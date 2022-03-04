@@ -103,18 +103,42 @@ const filterMedias = () => {
             switch (e.target.value) {
                 case 'Peintures noir et blanc':
                     filterMedias('black-white');
+                    filterButtons.forEach((element) => {
+                        element.classList.remove('filter-active');
+                    });
+                    document
+                        .querySelector('.filter-options__black-white')
+                        .classList.add('filter-active');
                     break;
 
                 case 'Peintures couleur':
                     filterMedias('colour');
+                    filterButtons.forEach((element) => {
+                        element.classList.remove('filter-active');
+                    });
+                    document
+                        .querySelector('.filter-options__colour')
+                        .classList.add('filter-active');
                     break;
 
                 case 'Dessins':
                     filterMedias('drawing');
+                    filterButtons.forEach((element) => {
+                        element.classList.remove('filter-active');
+                    });
+                    document
+                        .querySelector('.filter-options__drawings')
+                        .classList.add('filter-active');
                     break;
 
                 case 'Tous':
                     filterMedias('Tous');
+                    filterButtons.forEach((element) => {
+                        element.classList.remove('filter-active');
+                    });
+                    document
+                        .querySelector('.filter-options__all')
+                        .classList.add('filter-active');
                     break;
 
                 default:

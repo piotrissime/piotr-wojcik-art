@@ -10,3 +10,7 @@
         opacity: 0.5;
     }
 }
+
+.filter-button.filter-active:hover {
+    opacity: initial;
+}

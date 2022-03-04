@@ -5,6 +5,10 @@
     margin-top: 40px;
 }
 
+.filter-active {
+    background: #292620;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
