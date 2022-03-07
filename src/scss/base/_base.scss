@@ -8,7 +8,16 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background: #877e6d;
+    color: white;
+}
+
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+li {
+    list-style: none;
 }

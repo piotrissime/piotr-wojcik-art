@@ -1,0 +1,34 @@
+.contact-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-form form {
+    width: 600px;
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 2px;
+    border: none;
+    height: 35px;
+    width: 100%;
+    background: #615a4e;
+    color: white;
+    padding-left: 8px;
+}
+
+.contact-form textarea {
+    height: 200px;
+    resize: none;
+}
+
+.contact-form button {
+    background: #615a4e;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+
+}

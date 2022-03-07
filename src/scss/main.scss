@@ -8,6 +8,11 @@
 // components
 @use "components/header";
 @use "components/buttons";
+@use "components/icons";
+@use "components/lightbox";
+@use "components/contact-form";
 
 //pages
 @use "pages/home";
+@use "pages/gallery";
+@use "pages/contact";
