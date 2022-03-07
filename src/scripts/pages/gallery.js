@@ -9,8 +9,10 @@ const filterButtons = document.querySelectorAll('.filter-button');
 const lightbox = document.querySelector('.lightbox');
 const closeLightboxButton = document.querySelector('.lightbox__close-button');
 const lightboxCurrentImg = document.querySelector('.lightbox__current-img');
-const previousButton = document.querySelector('.lightbox__previous-image');
-const nextButton = document.querySelector('.lightbox__next-image');
+const previousButton = document.querySelector(
+    '.lightbox__previous-image-container'
+);
+const nextButton = document.querySelector('.lightbox__next-image-container');
 let currentIndex;
 
 const openLightbox = () => {

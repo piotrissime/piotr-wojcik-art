@@ -10,24 +10,55 @@
 
 // Lightbox controls
 .lightbox__close-button {
+    width: 100%;
+    height: 30%;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
     cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
 }
 
-.lightbox__previous-image {
-    position: absolute;
-    bottom: 100px;
-    left: 200px;
-    cursor: pointer;
+.lightbox__close-button svg {
+    margin-top: 27px;
+    margin-right: 42px;
 }
 
-.lightbox__next-image {
+.lightbox__previous-image-container {
     position: absolute;
-    bottom: 100px;
-    right: 200px;
+    bottom: 0;
+    left: 42px;
+    width: 50vw;
+    height: 70%;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.lightbox__next-image-container {
+    position: absolute;
+    bottom: 0;
+    right: 42px;
+    width: 50vw;
+    height: 70%;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 // LIghtbox media
@@ -39,5 +70,5 @@
 }
 
 .lightbox img {
-    width: 300px;
+    width: 100%;
 }

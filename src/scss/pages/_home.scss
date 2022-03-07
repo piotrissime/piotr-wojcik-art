@@ -56,3 +56,17 @@
 .home-main-footer__social-icons li:hover {
     opacity: 0.5;
 }
+
+// Responsive mode
+
+@media all and (max-width: 800px) {
+
+    // About section
+    .about-container-1,
+    .about-container-2 {
+        flex-direction: column;
+    }
+    .about__picture-1 {
+        object-fit: cover;
+    }
+}
