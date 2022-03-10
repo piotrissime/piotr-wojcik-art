@@ -8,6 +8,7 @@ module.exports = defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 galerie: resolve(__dirname, 'pages/galerie.html'),
                 contact: resolve(__dirname, 'pages/contact.html'),
+                success: resolve(__dirname, 'pages/success.html'),
             },
         },
     },
