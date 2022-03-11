@@ -41,6 +41,7 @@
     display: flex;
     justify-content: flex-start;
     opacity: 0.5;
+    z-index: 1;
     &:hover {
         opacity: 1;
     }
@@ -56,6 +57,7 @@
     display: flex;
     justify-content: flex-end;
     opacity: 0.5;
+    z-index: 1;
     &:hover {
         opacity: 1;
     }
@@ -67,8 +69,26 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
 }
 
 .lightbox img {
-    width: 100%;
+    max-height: 70vh;
+    max-width: 100%;
+}
+
+// Mobile version
+@media all and (max-width: 800px) {
+
+    // Lightbox controls
+    .lightbox__close-button {
+        height: 85%;
+    }
+    .lightbox__previous-image-container,
+    .lightbox__next-image-container {
+        height: 15%;
+    }
 }
