@@ -26,22 +26,31 @@
 
 // About section
 .about p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
-.about-container-1,
-.about-container-2 {
-    display: flex;
-    gap: 12px;
-}
 
+.about-container-1 {
+    // Makes a "block formatting context" to force the parent element to contain Its child elements.
+    overflow: hidden;
+}
 .about-container-2 {
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .about__picture-1,
 .about__picture-2 {
     height: 300px;
+}
+
+.about__picture-1 {
+    float: left;
+    margin-right: 15px;
+}
+.about__picture-2 {
+    float: right;
+    margin-right: 15px;
 }
 
 // Footer
@@ -64,9 +73,12 @@
     // About section
     .about-container-1,
     .about-container-2 {
+        display: flex;
         flex-direction: column;
     }
-    .about__picture-1 {
+    .about__picture-1,
+    .about__picture-2 {
         object-fit: cover;
+        margin-bottom: 10px;
     }
 }
