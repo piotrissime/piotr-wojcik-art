@@ -1,5 +1,3 @@
-// TODO : fix currentIndex bug after filtering medias
-
 // Medias
 const medias = document.querySelectorAll('.gallery__item img');
 let displayedMedias = document.querySelectorAll('.gallery__item img');
@@ -28,7 +26,8 @@ const enableLightbox = () => {
     displayedMedias.forEach((element, index) => {
         element.addEventListener('click', () => {
             let mediaSrc = element.src;
-            lightboxCurrentImg.setAttribute('src', mediaSrc);
+            let displayedMediaSrc = mediaSrc.replace('small', 'medium');
+            lightboxCurrentImg.setAttribute('src', displayedMediaSrc);
             currentIndex = index;
             openLightbox();
         });
@@ -42,7 +41,10 @@ const enableLightbox = () => {
 // Set src to current media
 const setMediaSrc = () => {
     const currentMedia = document.querySelector('.lightbox__current-img');
-    currentMedia.src = displayedMedias[currentIndex].src;
+    currentMedia.src = displayedMedias[currentIndex].src.replace(
+        'small',
+        'medium'
+    );
 };
 
 // Next and previous media inside lightbox
