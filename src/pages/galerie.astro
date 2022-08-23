@@ -6,66 +6,323 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Galerie">
     <Header />
 	<main>
-		<h1>C'est la galerie !</h1>
+		<div class="filter-options">
+			<input class="filter-options__all filter-button filter-active" type="button" value="Tous">
+			<input class="filter-options__black-white filter-button" type="button" value="Peintures noir et blanc">
+			<input class="filter-options__colour filter-button" type="button" value="Peintures couleur">
+			<input class="filter-options__drawings filter-button" type="button" value="Dessins">
+		</div>
+		<div class="gallery">
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/chat.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/belierok.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/charol.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/dessin-neige.jpg"
+					alt="Peinture"
+					class="drawing"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysage-couleur.jpg"
+					alt="Peinture"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/chouette.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/charol2.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/barzoi02.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/oursbrun.jpg"
+					alt="Peinture"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/gravure2.jpg"
+					alt="Gravure"
+					class="drawing"
+					loading="lazy"
+				/>
+			</div>
+			
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/chat2.jpg"
+					alt="Peinture de chat"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/pastoralebragny.jpg"
+					alt="Peinture de paysage"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/palmier01.jpg"
+					alt="Peinture de palmier"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/palmier03.jpg"
+					alt="Peinture de palmier"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/moutons.jpg"
+					alt="Peinture de moutons"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysage2.jpg"
+					alt="Peinture de paysage"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysanne.jpg"
+					alt="Peinture de paysanne"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/veaux-de-Bernard.jpg"
+					alt="Pinture de veaux"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/chapelle.jpg"
+					alt="Gravure de chapelle polonaise"
+					class="drawing"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/peinturemouton.jpg"
+					alt="Peinture de moutons"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/compositionmoutons.jpg"
+					alt="Peinture de moutons"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysage1.jpg"
+					alt="Peinture de paysage"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysageeau.jpg"
+					alt="Peinture de paysage"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/paysagevaches.jpg"
+					alt="Peinture de paysage"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/belierprofil.jpg"
+					alt="Peinture portrait de bélier en noir et blanc"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/londres.JPG"
+					alt="Photo d'exposition à Londres"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/expoiledere.jpg"
+					alt="Photo d'exposition"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/teckel.jpg"
+					alt="Peinture de teckel"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/grenade.jpg"
+					alt="Peinture en couleur de grenade"
+					class="colour"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/poules.jpg"
+					alt="Peinture de poules"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/atelier.jpg"
+					alt="Atelier avec peintures"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/belierchouette.jpg"
+					alt="Peintures de bélier et de chouette"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+
+			<div class="gallery__item">
+				<img
+					src="../assets/medias/small/Georg.jpg"
+					alt="Peinture de chauve-souris"
+					class="black-white"
+					loading="lazy"
+				/>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
 	}
 
-	h1 {
-		margin: 2rem 0;
+	.filter-active {
+		background: #292620;
 	}
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
+	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+		grid-template-columns: repeat(auto-fill, 350px);
+		justify-content: center;
+		gap: 40px;
+		margin-top: 20px;
+		margin-bottom: 70px;
+	}
+
+	.gallery img {
+		width: 350px;
+		height: 350px;
+		object-fit: cover;
+		cursor: pointer;
+		border-radius: 5px;
+		background-color: #3d3932;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.main-footer__social-icons {
+		display: flex;
+		justify-content: center;
+		gap: 25px;
+	}
+	.main-footer__social-icons li:hover {
+		opacity: 0.5;
 	}
 </style>
