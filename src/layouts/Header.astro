@@ -1,0 +1,40 @@
+<header class="main-header">
+    <nav class="main-header__menu">
+        <a href="../index.html">Accueil</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+<style>
+    .main-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+
+.main-header__menu {
+    display: flex;
+    gap: 42px;
+}
+
+.main-header__menu a:hover {
+    opacity: 0.5;
+}
+
+.main-header__menu a:active {
+    opacity: 0.3;
+}
+
+.active {
+    border-bottom: 2px solid white;
+}
+
+@media all and (max-width: 555px) {
+
+    // About section
+    .main-header {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+</style>
