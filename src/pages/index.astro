@@ -1,99 +1,131 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../layouts/Header.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<a href="/galerie/"> On bouge !</a>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+	<main class="home-main-content">
+		<div class="hero">
+		  <div class="hero__text">
+			<h1>Piotr Wojcik</h1>
+			<p>Peintures - Gravures - Dessins</p>
+		  </div>
+		  <div class="hero__image">
+			<img src="assets/medias/large/exhibition-london.jpg" alt="Piotr Wojcik dans une salle d'exposition">
+		  </div>
+		</div>
+  
+  
+		<section class="about">
+		  <div class="about-container-1">
+			<img class="about__picture-1" src="assets/medias/medium/taurillon.jpg" alt="taurillon">
+			<p class="about__text-1">Piotr Wojcik a choisi de poser son regard de peintre sur le petit et le gros bétail de nos campagnes françaises, traitant l’animal tant pour sa beauté plastique que pour la charge émotionnelle dont il est porteur. Suidés, bovidés, ovinés et autres gallinacés sont ainsi poursuivis par l’artiste qui se livre hebdomadairement à une véritable «&nbsp;chasse aux modèles&nbsp;», débusquant ses sujets dans les fermes et les pâturages de la régions.</p>
+		  </div>
+		  <div class="about-container-2">
+			<img class="about__picture-2" src="assets/medias/medium/paysage3.jpg" alt="paysage industriel">
+			<p class="about__text-2">Si l’on identifie avec certitude l’espèce de chaque animal, le traitement pictural dont il fait l’objet lui confère une filiation toute polonaise. Originaire de Silésie, Piotr Wojcik en a connu la rude atmosphère minière, privant la ville et la campagne de toute couleur. Cette grisaille silésienne plane dans ses peintures, transcrite par une gamme chromatique très réduite. La virtuosité de la technique, à base d’eau, d’huile et de colle, joue sur des phénomènes d’apparitions. Surgit de l’ombre, l’animal sort de l’obscurité, mémoire du peintre, pour apparaître dans la clarté d’un présent lui donnant un certain air de famille…</p>
+		  </div>
+		</section>
+	  </main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
+	.home-main-content {
+    padding: 0 50px;
+}
 
-	h1 {
-		margin: 2rem 0;
-	}
+.hero {
+    position: relative;
+}
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
+.hero__text {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    margin-top: 42px;
+}
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+.hero h1 {
+    margin-top: 0;
+}
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+.hero__image {
+    margin-top: 70px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+}
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+.hero__image img {
+    width: 580px;
+    box-shadow: 6px 7px 9px -7px rgba(59,59,59,0.75);
+}
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
+/* About section */
+.about p {
+    font-size: 1.3rem;
+}
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+
+.about-container-1 {
+    /* Makes a "block formatting context" to force the parent element to contain Its child elements. */
+    overflow: hidden;
+}
+.about-container-2 {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.about__picture-1,
+.about__picture-2 {
+    height: 300px;
+}
+
+.about__picture-1 {
+    float: left;
+    margin-right: 15px;
+}
+.about__picture-2 {
+    float: right;
+    margin-right: 15px;
+}
+
+/* Footer */
+.home-main-footer__social-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.home-main-footer__social-icons li:hover {
+    opacity: 0.5;
+}
+
+/* Responsive mode */
+
+@media all and (max-width: 800px) {
+
+    /* About section */
+    .about-container-1,
+    .about-container-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__picture-1,
+    .about__picture-2 {
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    /* Main section */
+    .home-main-content {
+        padding: 0 5px;
+    }
+}
+
+
+	
 </style>
