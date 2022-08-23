@@ -6,66 +6,73 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Contact">
     <Header />
 	<main>
-		<h1>Page de contact</h1>
+		<h1 class="contact-title">Me contacter</h1>
+		<div class="contact-form">
+			<form name="contact" action="/success/" method="POST" data-netlify="true">
+				<p>
+				  <label>Votre nom : <input type="text" name="name" required/></label>   
+				</p>
+				<p>
+				  <label>Votre Email: <input type="email" name="email" required/></label>
+				</p>
+				<p>
+				  <label>Votre message: <textarea name="message" required></textarea></label>
+				</p>
+				<p>
+				  <button type="submit">Envoyer</button>
+				</p>
+			  </form>
+		</div>
+		  
 	</main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	/* Contact form */
+	.contact-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 	}
 
-	h1 {
-		margin: 2rem 0;
+	.contact-form form {
+		width: 600px;
 	}
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
+	.contact-form input, .contact-form textarea {
+		border-radius: 2px;
+		border: none;
+		height: 35px;
+		width: 100%;
+		background: #615a4e;
+		color: white;
+		padding-left: 8px;
 	}
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
+	.contact-form textarea {
+		height: 200px;
+		resize: none;
 	}
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+	.contact-form button {
+		background: #615a4e;
+		color: white;
+		border: none;
+		padding: 7px 15px;
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
 	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
+	/* Layout */
+	.contact-title {
+    text-align: center;
 	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.contact-info {
+		text-align: center;
+		font-family: 'Playfair Display', serif;
+	}
+	form button:hover {
+		cursor: pointer;
+		opacity: 0.8;
 	}
 </style>
