@@ -1,6 +1,9 @@
 ---
 import Header from '../layouts/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Gallery from '../components/Gallery.astro';
+
+const images = await Astro.glob('./galleryItems/*.md')
 ---
 
 <Layout title="Galerie">
@@ -12,274 +15,7 @@ import Layout from '../layouts/Layout.astro';
 			<input class="filter-options__colour filter-button" type="button" value="Peintures couleur">
 			<input class="filter-options__drawings filter-button" type="button" value="Dessins">
 		</div>
-		<div class="gallery">
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/chat.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/belierok.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/charol.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/dessin-neige.jpg"
-					alt="Peinture"
-					class="drawing"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysage-couleur.jpg"
-					alt="Peinture"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/chouette.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/charol2.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/barzoi02.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/oursbrun.jpg"
-					alt="Peinture"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/gravure2.jpg"
-					alt="Gravure"
-					class="drawing"
-					loading="lazy"
-				/>
-			</div>
-			
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/chat2.jpg"
-					alt="Peinture de chat"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/pastoralebragny.jpg"
-					alt="Peinture de paysage"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/palmier01.jpg"
-					alt="Peinture de palmier"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/palmier03.jpg"
-					alt="Peinture de palmier"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/moutons.jpg"
-					alt="Peinture de moutons"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysage2.jpg"
-					alt="Peinture de paysage"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysanne.jpg"
-					alt="Peinture de paysanne"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/veaux-de-Bernard.jpg"
-					alt="Pinture de veaux"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/chapelle.jpg"
-					alt="Gravure de chapelle polonaise"
-					class="drawing"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/peinturemouton.jpg"
-					alt="Peinture de moutons"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/compositionmoutons.jpg"
-					alt="Peinture de moutons"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysage1.jpg"
-					alt="Peinture de paysage"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysageeau.jpg"
-					alt="Peinture de paysage"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/paysagevaches.jpg"
-					alt="Peinture de paysage"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/belierprofil.jpg"
-					alt="Peinture portrait de bélier en noir et blanc"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/londres.JPG"
-					alt="Photo d'exposition à Londres"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/expoiledere.jpg"
-					alt="Photo d'exposition"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/teckel.jpg"
-					alt="Peinture de teckel"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/grenade.jpg"
-					alt="Peinture en couleur de grenade"
-					class="colour"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/poules.jpg"
-					alt="Peinture de poules"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/atelier.jpg"
-					alt="Atelier avec peintures"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/belierchouette.jpg"
-					alt="Peintures de bélier et de chouette"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-
-			<div class="gallery__item">
-				<img
-					src="../assets/medias/small/Georg.jpg"
-					alt="Peinture de chauve-souris"
-					class="black-white"
-					loading="lazy"
-				/>
-			</div>
-		</div>
+		<Gallery images={images} />
 	</main>
 </Layout>
 
@@ -296,26 +32,23 @@ import Layout from '../layouts/Layout.astro';
 		background: #292620;
 	}
 
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 350px);
-		justify-content: center;
-		gap: 40px;
-		margin-top: 20px;
-		margin-bottom: 70px;
+	.filter-button {
+    border: none;
+    background: transparent;
+    color: white;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+	}
+	.filter-button:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+	.filter-button.filter-active:hover {
+		opacity: initial;
 	}
 
-	.gallery img {
-		width: 350px;
-		height: 350px;
-		object-fit: cover;
-		cursor: pointer;
-		border-radius: 5px;
-		background-color: #3d3932;
-		&:hover {
-			opacity: 0.8;
-		}
-	}
 
 	.main-footer__social-icons {
 		display: flex;

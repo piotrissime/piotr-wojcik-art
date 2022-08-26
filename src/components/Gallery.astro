@@ -1,0 +1,19 @@
+---
+import GalleryItem from './GalleryItem.astro'
+const { images } = Astro.props
+---
+<div class="gallery">
+    {images.map((elt: any) => (
+        <GalleryItem src={elt.frontmatter.img} alt={elt.frontmatter.alt} dimensions={elt.frontmatter.dimensions} price={elt.frontmatter.price} />
+    ))}
+</div>
+<style>
+    .gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 350px);
+		justify-content: center;
+		gap: 40px;
+		margin-top: 20px;
+		margin-bottom: 70px;
+	}
+</style>
