@@ -1,10 +1,10 @@
 ---
 // const { frontmatter: content, mySrc } = Astro.props
-const { content, src, alt, dimensions, price } = Astro.props
+const { src, type, alt, dimensions, price } = Astro.props
 ---
 <div class="gallery__item">
     <div class="image-container">
-        <img class="image-container__content"
+        <img class={type}
             src={src}
             alt={alt}
         />
@@ -13,10 +13,9 @@ const { content, src, alt, dimensions, price } = Astro.props
         <p class="dimensions">{dimensions}</p>
         <p class="price">{price} €</p>
     </div>
-    <p>{content}</p>
 </div>
 <style>
-    .image-container__content {
+    .image-container img {
 		width: 350px;
 		height: 350px;
 		object-fit: cover;
@@ -24,7 +23,7 @@ const { content, src, alt, dimensions, price } = Astro.props
 		border-radius: 5px;
 		background-color: #3d3932;
 	}
-    .image-container__content:hover {
+    .image-container img:hover {
         opacity: 0.8;
     }
 

@@ -4,8 +4,20 @@ const { images } = Astro.props
 ---
 <div class="gallery">
     {images.map((elt: any) => (
-        <GalleryItem src={elt.frontmatter.img} alt={elt.frontmatter.alt} dimensions={elt.frontmatter.dimensions} price={elt.frontmatter.price} />
+        <GalleryItem src={elt.frontmatter.img} type={elt.frontmatter.type} alt={elt.frontmatter.alt} dimensions={elt.frontmatter.dimensions} price={elt.frontmatter.price} />
     ))}
+	<div class="gallery__item">
+		<div class="image-container">
+			<img class="image-container__content black-white"
+				src="/assets/medias/medium/chat.jpg"
+				alt="test"
+			/>
+		</div>
+		<div class="image-description">
+			<p class="dimensions">???x???</p>
+			<p class="price">42 €</p>
+		</div>
+	</div>
 </div>
 <style>
     .gallery {
