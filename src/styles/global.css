@@ -21,3 +21,27 @@ a {
 li {
     list-style: none;
 }
+
+/* Typography */
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Homepage */
+.home-main-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+.home-main-content p {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+/* Filter options */
+.filter-active {
+    background: #292620;
+}
+
+.filter-button.filter-active:hover {
+    opacity: initial;
+}

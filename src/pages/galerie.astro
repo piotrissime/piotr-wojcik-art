@@ -2,11 +2,12 @@
 import Header from '../layouts/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import Gallery from '../components/Gallery.astro';
+import Lightbox from '../components/Lightbox.astro';
 
 const images = await Astro.glob('./galleryItems/*.md')
 ---
 
-<Layout title="Galerie">
+<Layout title="Galerie | Piotr Wojcik">
     <Header />
 	<main>
 		<div class="filter-options">
@@ -17,6 +18,7 @@ const images = await Astro.glob('./galleryItems/*.md')
 		</div>
 		<Gallery images={images} />
 	</main>
+	<Lightbox />
 </Layout>
 
 <script src="../scripts/gallery"></script>
@@ -28,10 +30,6 @@ const images = await Astro.glob('./galleryItems/*.md')
     justify-content: center;
     gap: 25px;
     margin-top: 40px;
-	}
-
-	.filter-active {
-		background: #292620;
 	}
 
 	.filter-button {
@@ -46,10 +44,6 @@ const images = await Astro.glob('./galleryItems/*.md')
         cursor: pointer;
         opacity: 0.5;
     }
-
-	.filter-button.filter-active:hover {
-		opacity: initial;
-	}
 
 
 	.main-footer__social-icons {
