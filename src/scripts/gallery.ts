@@ -27,7 +27,9 @@ const enableLightbox = () => {
     displayedMedias.forEach((element, index) => {
         element.addEventListener('click', () => {
             let mediaSrc = element.src;
-            let displayedMediaSrc = mediaSrc.replace('small', 'medium');
+            // Multiple media sizes should be handled differently with CMS
+            // let displayedMediaSrc = mediaSrc.replace('small', 'medium');
+            let displayedMediaSrc = mediaSrc;
             lightboxCurrentImg.setAttribute('src', displayedMediaSrc);
             currentIndex = index;
             openLightbox();
@@ -42,10 +44,12 @@ const enableLightbox = () => {
 // Set src to current media
 const setMediaSrc = () => {
     const currentMedia = document.querySelector('.lightbox__current-img');
-    currentMedia.src = displayedMedias[currentIndex].src.replace(
-        'small',
-        'medium'
-    );
+    // Multiple media sizes should be handled differently with CSM
+    // currentMedia.src = displayedMedias[currentIndex].src.replace(
+    //     'small',
+    //     'medium'
+    // );
+    currentMedia.src = displayedMedias[currentIndex].src;
 };
 
 // Next and previous media inside lightbox
