@@ -11,7 +11,7 @@ const { src, type, alt, dimensions, price } = Astro.props
     </div>
     <div class="image-description">
         <p class="dimensions">{dimensions}</p>
-        <p class="price">{price} €</p>
+        <p class="price">{price && price + " €"}</p>
     </div>
 </div>
 <style>

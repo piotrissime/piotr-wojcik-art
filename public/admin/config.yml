@@ -17,7 +17,7 @@ collections:
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
-      - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing"]}
+      - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}
       - {label: "Texte alternatif", name: "alt", widget: "string"}
       - {label: "Dimensions", name: "dimensions", widget: "string", required: false}
       - {label: "Prix (en €)", name: "price", widget: "number", required: false}
