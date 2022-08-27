@@ -12,7 +12,7 @@ const previousButton = document.querySelector(
     '.lightbox__previous-image-container'
 );
 const nextButton = document.querySelector('.lightbox__next-image-container');
-let currentIndex: number;
+let currentIndex;
 
 const openLightbox = () => {
     lightbox.style.display = 'block';
@@ -82,7 +82,7 @@ const lightboxControls = () => {
 };
 
 const filterMedias = () => {
-    const filterMedias = (category: string) => {
+    const filterMedias = (category) => {
         if (category !== 'Tous') {
             let filteredElements = document.querySelectorAll(
                 `.gallery__item img:not(.${category})`
