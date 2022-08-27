@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
+import HomeFooter from '../layouts/HomeFooter.astro';
 ---
 
 <Layout title="Accueil | Piotr Wojcik">
@@ -28,12 +29,21 @@ import Header from '../layouts/Header.astro';
 		  </div>
 		</section>
 	  </main>
+      <HomeFooter />
 </Layout>
 
 <style>
-	.home-main-content {
-    padding: 0 50px;
-}
+    .home-main-content h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .home-main-content p {
+        margin-top: 0;
+        font-size: 2rem;
+    }
+        .home-main-content {
+        padding: 0 50px;
+    }
 
 .hero {
     position: relative;
