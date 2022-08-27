@@ -19,5 +19,5 @@ collections:
       - {label: "Image", name: "img", widget: "image"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing"]}
       - {label: "Texte alternatif", name: "alt", widget: "string"}
-      - {label: "Dimensions", name: "dimensions", widget: "string", required: "false"}
-      - {label: "Prix (en €)", name: "price", widget: "number", required: "false"}
+      - {label: "Dimensions", name: "dimensions", widget: "string", required: false}
+      - {label: "Prix (en €)", name: "price", widget: "number", required: false}
