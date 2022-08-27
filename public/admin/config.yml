@@ -15,8 +15,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
+      - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}
       - {label: "Texte alternatif", name: "alt", widget: "string"}
       - {label: "Dimensions", name: "dimensions", widget: "string", required: false}
