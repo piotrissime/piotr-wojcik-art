@@ -1,0 +1,46 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<header class="main-header">
+    <nav class="main-header__menu">
+        <a class={currentPath === "" ? "active" : ""} href="/">Accueil</a>
+        <a class={currentPath.includes("galerie") ? "active" : ""} href="/galerie/">Galerie</a>
+        <a class={currentPath.includes("contact") ? "active" : ""} href="/contact/">Contact</a>
+    </nav>
+</header>
+<style>
+    .main-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+
+.main-header__menu {
+    display: flex;
+    gap: 42px;
+}
+
+.main-header__menu a:hover {
+    opacity: 0.5;
+}
+
+.main-header__menu a:active {
+    opacity: 0.3;
+}
+
+/* Todo : set active nav link */
+.active {
+    border-bottom: 2px solid white;
+}
+
+@media all and (max-width: 555px) {
+
+    // About section
+    .main-header {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+</style>

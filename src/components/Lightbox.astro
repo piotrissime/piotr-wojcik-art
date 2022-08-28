@@ -1,0 +1,125 @@
+---
+
+---
+<div class="lightbox">
+    <div class="lightbox__controls">
+        <div class="lightbox__close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+        </div>
+        <div class="lightbox__image-selection">
+            <div class="lightbox__previous-image-container">
+                <svg class="lightbox__previous-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+            </div>
+            <div class="lightbox__next-image-container">
+                <svg class="lightbox__next-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
+            </div>
+        </div>
+    </div>
+    <div class="lightbox__media">
+        <img class="lightbox__current-img" src="../assets/medias/large/exhibition-london.jpg" alt="test">
+    </div>
+</div>
+<style>
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(43, 43, 43, 0.575);
+    }
+
+    /* Lightbox controls */
+    .lightbox__close-button {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        opacity: 0.5;
+    }
+    .lightbox__close-button:hover {
+            opacity: 1;
+        }
+
+    .lightbox__close-button svg {
+        margin-top: 27px;
+        margin-right: 42px;
+    }
+
+    .lightbox__previous-image-container {
+        position: absolute;
+        bottom: 0;
+        left: 42px;
+        width: 50vw;
+        height: 70%;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    .lightbox__previous-image-container:hover {
+            opacity: 1;
+        }
+
+    .lightbox__next-image-container {
+        position: absolute;
+        bottom: 0;
+        right: 42px;
+        width: 50vw;
+        height: 70%;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    .lightbox__next-image-container:hover {
+            opacity: 1;
+        }
+
+    /* Lightbox media */
+    .lightbox__media {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .lightbox img {
+        max-height: 70vh;
+        max-width: 100%;
+    }
+
+    svg {
+    width: 20px;
+    }
+
+    svg path {
+        fill: white;
+    }
+
+    /* Mobile version */
+    @media all and (max-width: 800px) {
+
+        /* Lightbox controls */
+        .lightbox__close-button {
+            height: 85%;
+        }
+        .lightbox__previous-image-container,
+        .lightbox__next-image-container {
+            height: 15%;
+        }
+    }
+</style>

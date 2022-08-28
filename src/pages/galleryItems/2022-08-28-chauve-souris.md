@@ -1,0 +1,6 @@
+---
+img: /assets/medias/medium/Georg.jpg
+name: chauve-souris
+type: black-white
+alt: Peinture en noir et blanc de chauve-souris.
+---

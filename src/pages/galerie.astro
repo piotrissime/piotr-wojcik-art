@@ -1,0 +1,59 @@
+---
+import Header from '../layouts/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Gallery from '../components/Gallery.astro';
+import Lightbox from '../components/Lightbox.astro';
+import Footer from '../layouts/Footer.astro';
+
+const images = await Astro.glob('./galleryItems/*.md')
+---
+
+<Layout title="Galerie | Piotr Wojcik">
+    <Header />
+	<main>
+		<div class="filter-options">
+			<input class="filter-options__all filter-button filter-active" type="button" value="Tous">
+			<input class="filter-options__black-white filter-button" type="button" value="Peintures noir et blanc">
+			<input class="filter-options__colour filter-button" type="button" value="Peintures couleur">
+			<input class="filter-options__drawings filter-button" type="button" value="Dessins">
+		</div>
+		<Gallery images={images} />
+	</main>
+	<Footer />
+	<Lightbox />
+</Layout>
+
+<script src="../scripts/gallery.js"></script>
+
+<style>
+	.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+	}
+
+	.filter-button {
+    border: none;
+    background: transparent;
+    color: white;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+	}
+	.filter-button:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+
+	.main-footer__social-icons {
+		display: flex;
+		justify-content: center;
+		gap: 25px;
+	}
+	.main-footer__social-icons li:hover {
+		opacity: 0.5;
+	}
+</style>
