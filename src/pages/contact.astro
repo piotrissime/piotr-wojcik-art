@@ -1,0 +1,79 @@
+---
+import Header from '../layouts/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/Footer.astro';
+---
+
+<Layout title="Contact | Piotr Wojcik">
+    <Header />
+	<main>
+		<h1 class="contact-title">Me contacter</h1>
+		<div class="contact-form">
+			<form name="contact" action="/success/" method="POST" data-netlify="true">
+				<p>
+				  <label>Votre nom : <input type="text" name="name" required/></label>   
+				</p>
+				<p>
+				  <label>Votre Email: <input type="email" name="email" required/></label>
+				</p>
+				<p>
+				  <label>Votre message: <textarea name="message" required></textarea></label>
+				</p>
+				<p>
+				  <button type="submit">Envoyer</button>
+				</p>
+			  </form>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	/* Contact form */
+	.contact-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+	}
+
+	.contact-form form {
+		width: 600px;
+	}
+
+	.contact-form input, .contact-form textarea {
+		border-radius: 2px;
+		border: none;
+		height: 35px;
+		width: 100%;
+		background: #615a4e;
+		color: white;
+		padding-left: 8px;
+	}
+
+	.contact-form textarea {
+		height: 200px;
+		resize: none;
+	}
+
+	.contact-form button {
+		background: #615a4e;
+		color: white;
+		border: none;
+		padding: 7px 15px;
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
+
+	}
+	/* Layout */
+	.contact-title {
+    text-align: center;
+	}
+	.contact-info {
+		text-align: center;
+		font-family: 'Playfair Display', serif;
+	}
+	form button:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+</style>

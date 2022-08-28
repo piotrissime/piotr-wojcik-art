@@ -2,6 +2,6 @@
 
 Piotr Wojcik's personal website.
 
-![black and white paintings](assets/medias/medium/belierchouette.jpg)
+![black and white paintings](public/assets/medias/medium/belierchouette.jpg)
 
 https://piotrwojcik.fr/

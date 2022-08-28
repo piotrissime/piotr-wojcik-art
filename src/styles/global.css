@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #877e6d;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+svg {
+    width: 20px;
+}
+
+svg path {
+    fill: white;
+}
+
+/* Typography */
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Filter options */
+.filter-active {
+    background: #292620;
+}
+
+.filter-button.filter-active:hover {
+    opacity: initial;
+}

@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
+import HomeFooter from '../layouts/HomeFooter.astro';
+---
+
+<Layout title="Accueil | Piotr Wojcik">
+	<Header />
+	<main class="home-main-content">
+		<div class="hero">
+		  <div class="hero__text">
+			<h1>Piotr Wojcik</h1>
+			<p>Peintures - Gravures - Dessins</p>
+		  </div>
+		  <div class="hero__image">
+			<img src="assets/medias/large/exhibition-london.jpg" alt="Piotr Wojcik dans une salle d'exposition">
+		  </div>
+		</div>
+  
+  
+		<section class="about">
+		  <div class="about-container-1">
+			<img class="about__picture-1" src="assets/medias/medium/taurillon.jpg" alt="taurillon">
+			<p class="about__text-1">Piotr Wojcik a choisi de poser son regard de peintre sur le petit et le gros bétail de nos campagnes françaises, traitant l’animal tant pour sa beauté plastique que pour la charge émotionnelle dont il est porteur. Suidés, bovidés, ovinés et autres gallinacés sont ainsi poursuivis par l’artiste qui se livre hebdomadairement à une véritable «&nbsp;chasse aux modèles&nbsp;», débusquant ses sujets dans les fermes et les pâturages de la régions.</p>
+		  </div>
+		  <div class="about-container-2">
+			<img class="about__picture-2" src="assets/medias/medium/paysage3.jpg" alt="paysage industriel">
+			<p class="about__text-2">Si l’on identifie avec certitude l’espèce de chaque animal, le traitement pictural dont il fait l’objet lui confère une filiation toute polonaise. Originaire de Silésie, Piotr Wojcik en a connu la rude atmosphère minière, privant la ville et la campagne de toute couleur. Cette grisaille silésienne plane dans ses peintures, transcrite par une gamme chromatique très réduite. La virtuosité de la technique, à base d’eau, d’huile et de colle, joue sur des phénomènes d’apparitions. Surgit de l’ombre, l’animal sort de l’obscurité, mémoire du peintre, pour apparaître dans la clarté d’un présent lui donnant un certain air de famille…</p>
+		  </div>
+		</section>
+	  </main>
+      <HomeFooter />
+</Layout>
+
+<style>
+    .home-main-content h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .home-main-content p {
+        margin-top: 0;
+        font-size: 2rem;
+    }
+        .home-main-content {
+        padding: 0 50px;
+    }
+
+.hero {
+    position: relative;
+}
+
+.hero__text {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    margin-top: 42px;
+}
+
+.hero h1 {
+    margin-top: 0;
+}
+
+.hero__image {
+    margin-top: 70px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__image img {
+    width: 580px;
+    box-shadow: 6px 7px 9px -7px rgba(59,59,59,0.75);
+}
+
+/* About section */
+.about p {
+    font-size: 1.3rem;
+}
+
+
+.about-container-1 {
+    /* Makes a "block formatting context" to force the parent element to contain Its child elements. */
+    overflow: hidden;
+}
+.about-container-2 {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.about__picture-1,
+.about__picture-2 {
+    height: 300px;
+}
+
+.about__picture-1 {
+    float: left;
+    margin-right: 15px;
+}
+.about__picture-2 {
+    float: right;
+    margin-right: 15px;
+}
+
+/* Footer */
+.home-main-footer__social-icons {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.home-main-footer__social-icons li:hover {
+    opacity: 0.5;
+}
+
+/* Responsive mode */
+
+@media all and (max-width: 800px) {
+
+    /* About section */
+    .about-container-1,
+    .about-container-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__picture-1,
+    .about__picture-2 {
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    /* Main section */
+    .home-main-content {
+        padding: 0 5px;
+    }
+}
+
+
+	
+</style>
