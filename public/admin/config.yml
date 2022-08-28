@@ -18,6 +18,6 @@ collections:
       - {label: "Image", name: "img", widget: "image"}
       - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}
-      - {label: "Texte alternatif", name: "alt", widget: "string"}
-      - {label: "Dimensions", name: "dimensions", widget: "string", required: false}
+      - {label: "Texte alternatif (ex : Peinture de chat)", name: "alt", widget: "string"}
+      - {label: "Dimensions (ex : 200x200 cm)", name: "dimensions", widget: "string", required: false}
       - {label: "Prix (en €)", name: "price", widget: "number", required: false}
