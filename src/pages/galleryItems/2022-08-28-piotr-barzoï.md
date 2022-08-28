@@ -1,0 +1,6 @@
+---
+img: /assets/medias/medium/barzoi02.jpg
+name: piotr-barzoï
+type: other
+alt: Piotr Wojcik à côté d'une peinture de barzoï
+---
