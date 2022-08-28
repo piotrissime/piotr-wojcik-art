@@ -6,8 +6,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
 <header class="main-header">
     <nav class="main-header__menu">
         <a class={currentPath === "" ? "active" : ""} href="/">Accueil</a>
-        <a class={currentPath === "galerie/" ? "active" : ""} href="/galerie/">Galerie</a>
-        <a class={currentPath === "contact/" ? "active" : ""} href="/contact/">Contact</a>
+        <a class={currentPath.includes("galerie") ? "active" : ""} href="/galerie/">Galerie</a>
+        <a class={currentPath.includes("contact") ? "active" : ""} href="/contact/">Contact</a>
     </nav>
 </header>
 <style>
