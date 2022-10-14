@@ -13,7 +13,12 @@ import HomeFooter from '../layouts/HomeFooter.astro';
 			<p>Peintures - Gravures - Dessins</p>
 		  </div>
 		  <div class="hero__image">
-			<img src="assets/medias/large/exhibition-london.jpg" alt="Piotr Wojcik dans une salle d'exposition">
+                <picture>
+                    <source srcset="assets/medias/large/exhibition-london.avif" type="image/avif">
+                    <source srcset="assets/medias/large/exhibition-london.webp" type="image/webp">
+                    <source srcset="assets/medias/large/exhibition-london.jpg" type="image/jpeg">
+                <img src="assets/medias/large/exhibition-london.jpg" width="580" height="435 " alt="Piotr Wojcik dans une salle d'exposition" >
+                </picture>
 		  </div>
 		</div>
   
