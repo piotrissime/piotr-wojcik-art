@@ -47,6 +47,9 @@
     .lightbox__close-button:hover {
             opacity: 1;
         }
+    .lightbox__close-button:active svg {
+        transform: scale(0.9);
+    }
 
     .lightbox__close-button svg {
         margin-top: 27px;
@@ -68,6 +71,9 @@
     .lightbox__previous-image-container:hover {
             opacity: 1;
         }
+    .lightbox__previous-image-container:active svg {
+        transform: scale(0.9);
+    }
 
     .lightbox__next-image-container {
         position: absolute;
@@ -84,6 +90,9 @@
     .lightbox__next-image-container:hover {
             opacity: 1;
         }
+    .lightbox__next-image-container:active svg {
+        transform: scale(0.9);
+    }
 
     /* Lightbox media */
     .lightbox__media {
@@ -100,6 +109,11 @@
     .lightbox img {
         max-height: 70vh;
         max-width: 100%;
+        /* Prevent "blue" selected picture when clicking next/previous image */
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
     }
 
     svg {
