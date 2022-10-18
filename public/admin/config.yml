@@ -15,9 +15,9 @@ collections:
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Image JPEG (700x700 max)", name: "img-jpeg-medium", widget: "image"}
       - {label: "Image JPEG (Taille large)", name: "img-jpeg-large", widget: "image" required: false}
-      - {label: "Image AVIF (700x700 max)", name: "img-avif-medium", widget: "image"}
+      - {label: "Image AVIF (700x700 max)", name: "img-avif-medium", widget: "image"  required: false}
       - {label: "Image AVIF (Taille large)", name: "img-avif-large", widget: "image" required: false}
-      - {label: "Image WebP (700x700 max)", name: "img-webp-medium", widget: "image"}
+      - {label: "Image WebP (700x700 max)", name: "img-webp-medium", widget: "image"  required: false}
       - {label: "Image WebP (Taille large)", name: "img-webp-large", widget: "image" required: false}
       - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}

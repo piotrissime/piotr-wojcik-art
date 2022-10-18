@@ -1,6 +1,6 @@
 // Medias
-const medias = document.querySelectorAll('.gallery__item img');
-let displayedMedias = document.querySelectorAll('.gallery__item img');
+const medias = document.querySelectorAll('.gallery__item picture');
+let displayedMedias = document.querySelectorAll('.gallery__item picture');
 // Filter buttons
 const filterButtons = document.querySelectorAll('.filter-button');
 
@@ -26,10 +26,13 @@ const enableLightbox = () => {
     // Open lightbox
     displayedMedias.forEach((element, index) => {
         element.addEventListener('click', () => {
-            let mediaSrc = element.src;
+            // let mediaSrc = element.src;
+            // fix for picture tag
+            let mediaSrc = element.querySelector("img").src;
             // Multiple media sizes should be handled differently with CMS
             // let displayedMediaSrc = mediaSrc.replace('small', 'medium');
             let displayedMediaSrc = mediaSrc;
+            console.log(element.querySelector("img").src);
             lightboxCurrentImg.setAttribute('src', displayedMediaSrc);
             currentIndex = index;
             openLightbox();
@@ -49,7 +52,10 @@ const setMediaSrc = () => {
     //     'small',
     //     'medium'
     // );
-    currentMedia.src = displayedMedias[currentIndex].src;
+    
+    // currentMedia.src = displayedMedias[currentIndex].src;
+    // fix for picture tag
+    currentMedia.src = displayedMedias[currentIndex].querySelector("img").src;
 };
 
 // Next and previous media inside lightbox
@@ -85,19 +91,18 @@ const filterMedias = () => {
     const filterMedias = (category) => {
         if (category !== 'Tous') {
             let filteredElements = document.querySelectorAll(
-                `.gallery__item img:not(.${category})`
+                `.gallery__item picture:not(.${category})`
             );
             for (const iterator of filteredElements) {
                 iterator.parentNode.parentNode.style.display = 'none';
             }
             displayedMedias = document.querySelectorAll(
-                `.gallery__item img.${category}`
+                `.gallery__item picture.${category}`
             );
             // Display filtered media if previously filtered
             for (const iterator of displayedMedias) {
                 iterator.parentNode.parentNode.style.display = 'block';
             }
-            console.log(displayedMedias);
         } else {
             for (const iterator of medias) {
                 iterator.parentNode.parentNode.style.display = 'block';
