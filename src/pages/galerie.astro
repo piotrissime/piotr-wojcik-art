@@ -21,6 +21,9 @@ const images = await Astro.glob('./galleryItems/*.md')
 	</main>
 	<Footer />
 	<Lightbox />
+	<div class="scroll-to-top">
+		<img src="/assets/icons/chevron-up.svg" alt="Retour en haut de page">
+	</div>
 </Layout>
 
 <script src="../scripts/gallery.js"></script>
@@ -55,5 +58,31 @@ const images = await Astro.glob('./galleryItems/*.md')
 	}
 	.main-footer__social-icons li:hover {
 		opacity: 0.5;
+	}
+
+	.scroll-to-top {
+		position: fixed;
+		right: 2rem;
+		background-color: antiquewhite;
+		border-radius: 5px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+		transition: all .4s;
+		opacity: 0;
+		bottom: 0rem;
+	}
+	.scroll-to-top_active {
+		opacity: 1;
+		pointer-events: auto;
+		bottom: 2rem;
+	}
+	.scroll-to-top_active:active {
+		transform: scale(0.9);
+	}
+	.scroll-to-top img {
+		pointer-events: none;
 	}
 </style>
