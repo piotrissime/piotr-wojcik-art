@@ -10,19 +10,24 @@ import Footer from "../layouts/Footer.astro";
     <h1 class="contact-title">Me contacter</h1>
     <div class="contact-form">
       <form name="contact" action="/success/" method="POST" data-netlify="true">
-        <p>
-          <label>Votre nom : <input type="text" name="name" required /></label>
-        </p>
-        <p>
+        <div class="form-group">
           <label
-            >Votre Email: <input type="email" name="email" required /></label
+            ><span class="label-text">Votre nom :</span>
+            <input type="text" name="name" required /></label
           >
-        </p>
-        <p>
+        </div>
+        <div class="form-group">
           <label
-            >Votre message: <textarea name="message" required></textarea></label
+            ><span class="label-text">Votre Email :</span>
+            <input type="email" name="email" required /></label
           >
-        </p>
+        </div>
+        <div class="form-group">
+          <label
+            ><span class="label-text">Votre message :</span>
+            <textarea name="message" required></textarea></label
+          >
+        </div>
         <p>
           <button type="submit">Envoyer</button>
         </p>
@@ -42,6 +47,15 @@ import Footer from "../layouts/Footer.astro";
 
   .contact-form form {
     width: 600px;
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
+
+  .label-text {
+    display: inline-block;
+    margin-bottom: 0.4rem;
   }
 
   .contact-form input,
@@ -67,6 +81,7 @@ import Footer from "../layouts/Footer.astro";
     padding: 7px 15px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
+    border-radius: 4px;
   }
   /* Layout */
   .contact-title {
