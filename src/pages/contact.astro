@@ -1,79 +1,98 @@
 ---
-import Header from '../layouts/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import Footer from '../layouts/Footer.astro';
+import Header from "../layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
 <Layout title="Contact | Piotr Wojcik">
-    <Header />
-	<main>
-		<h1 class="contact-title">Me contacter</h1>
-		<div class="contact-form">
-			<form name="contact" action="/success/" method="POST" data-netlify="true">
-				<p>
-				  <label>Votre nom : <input type="text" name="name" required/></label>   
-				</p>
-				<p>
-				  <label>Votre Email: <input type="email" name="email" required/></label>
-				</p>
-				<p>
-				  <label>Votre message: <textarea name="message" required></textarea></label>
-				</p>
-				<p>
-				  <button type="submit">Envoyer</button>
-				</p>
-			  </form>
-		</div>
-	</main>
-	<Footer />
+  <Header />
+  <main>
+    <h1 class="contact-title">Me contacter</h1>
+    <div class="contact-form">
+      <form name="contact" action="/success/" method="POST" data-netlify="true">
+        <div class="form-group">
+          <label
+            ><span class="label-text">Votre nom :</span>
+            <input type="text" name="name" required /></label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            ><span class="label-text">Votre Email :</span>
+            <input type="email" name="email" required /></label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            ><span class="label-text">Votre message :</span>
+            <textarea name="message" required></textarea></label
+          >
+        </div>
+        <p>
+          <button type="submit">Envoyer</button>
+        </p>
+      </form>
+    </div>
+  </main>
+  <Footer />
 </Layout>
 
 <style>
-	/* Contact form */
-	.contact-form {
+  /* Contact form */
+  .contact-form {
     display: flex;
     justify-content: center;
     width: 100%;
-	}
+  }
 
-	.contact-form form {
-		width: 600px;
-	}
+  .contact-form form {
+    width: 600px;
+  }
 
-	.contact-form input, .contact-form textarea {
-		border-radius: 2px;
-		border: none;
-		height: 35px;
-		width: 100%;
-		background: #615a4e;
-		color: white;
-		padding-left: 8px;
-	}
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
 
-	.contact-form textarea {
-		height: 200px;
-		resize: none;
-	}
+  .label-text {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  }
 
-	.contact-form button {
-		background: #615a4e;
-		color: white;
-		border: none;
-		padding: 7px 15px;
-		font-family: 'Playfair Display', serif;
-		font-weight: bold;
+  .contact-form input,
+  .contact-form textarea {
+    border-radius: 2px;
+    border: none;
+    height: 35px;
+    width: 100%;
+    background: #615a4e;
+    color: white;
+    padding-left: 8px;
+  }
 
-	}
-	/* Layout */
-	.contact-title {
+  .contact-form textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  .contact-form button {
+    background: #615a4e;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  /* Layout */
+  .contact-title {
     text-align: center;
-	}
-	.contact-info {
-		text-align: center;
-		font-family: 'Playfair Display', serif;
-	}
-	form button:hover {
-		cursor: pointer;
-		opacity: 0.8;
-	}
+  }
+  .contact-info {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+  form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 </style>

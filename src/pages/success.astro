@@ -1,29 +1,28 @@
 ---
-import Header from '../layouts/Header.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from "../layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Success">
-    <Header />
-	<main >
-        <p class="success-message">Votre message a bien été envoyé, merci !</p>
-      </main>
+  <Header />
+  <main>
+    <p class="success-message">Votre message a bien été envoyé, merci !</p>
+  </main>
 </Layout>
 
 <style>
-    .success-message {
+  .success-message {
     text-align: center;
     margin-top: 200px;
     font-size: 1.5rem;
-    }
+  }
 
-    .success-main-footer__social-icons {
-        margin-top: 150px;
-        display: flex;
-        gap: 25px;
-        justify-content: flex-end;
-        align-items: center;
-        margin-right: 70px;
-    }
-	
+  .success-main-footer__social-icons {
+    margin-top: 150px;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 70px;
+  }
 </style>

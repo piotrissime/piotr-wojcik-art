@@ -1,19 +1,30 @@
 ---
-import GalleryItem from './GalleryItem.astro'
-const { images } = Astro.props
+import GalleryItem from "./GalleryItem.astro";
+const { images } = Astro.props;
 ---
+
 <div class="gallery">
-    {images.map((elt: any) => (
-        <GalleryItem srcJpegMedium={elt.frontmatter['img-jpeg-medium']} srcAvifMedium={elt.frontmatter['img-avif-medium']} srcWebpMedium={elt.frontmatter['img-webp-medium']} type={elt.frontmatter.type} alt={elt.frontmatter.alt} dimensions={elt.frontmatter.dimensions} price={elt.frontmatter.price} />
-    ))}
+  {
+    images.map((elt: any) => (
+      <GalleryItem
+        srcJpegMedium={elt.frontmatter["img-jpeg-medium"]}
+        srcAvifMedium={elt.frontmatter["img-avif-medium"]}
+        srcWebpMedium={elt.frontmatter["img-webp-medium"]}
+        type={elt.frontmatter.type}
+        alt={elt.frontmatter.alt}
+        dimensions={elt.frontmatter.dimensions}
+        price={elt.frontmatter.price}
+      />
+    ))
+  }
 </div>
 <style>
-    .gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 350px);
-		justify-content: center;
-		gap: 40px;
-		margin-top: 20px;
-		margin-bottom: 70px;
-	}
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
 </style>
