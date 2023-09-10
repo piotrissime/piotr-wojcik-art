@@ -24,4 +24,4 @@ collections:
       - {label: "Texte alternatif (ex : Peinture de chat)", name: "alt", widget: "string"}
       - {label: "Dimensions (ex : 200x200 cm)", name: "dimensions", widget: "string", required: false}
       - {label: "Prix (en €)", name: "price", widget: "number", required: false}
-      - {label: "Date", name: "date", widget: "date", default: "", format: "YYYY MM DD HH mm"}
+      - {label: "Date", name: "date",  widget: "datetime", default: "", format: "LLL"}
