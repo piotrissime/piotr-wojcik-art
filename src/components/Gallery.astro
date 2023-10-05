@@ -1,11 +1,13 @@
 ---
 import GalleryItem from "./GalleryItem.astro";
 const { images } = Astro.props;
+// Reverse the order of the images (from latests to oldest)
+const reversedImages = [...images].reverse();
 ---
 
 <div class="gallery">
   {
-    images.map((elt: any) => (
+    reversedImages.map((elt: any) => (
       <GalleryItem
         srcJpegMedium={elt.frontmatter["img-jpeg-medium"]}
         srcAvifMedium={elt.frontmatter["img-avif-medium"]}
