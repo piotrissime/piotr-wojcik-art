@@ -38,11 +38,26 @@ import HomeFooter from "../layouts/HomeFooter.astro";
 
     <section class="about">
       <div class="about-container-1">
-        <img
-          class="about__picture-1"
-          src="assets/medias/medium/taurillon.jpg"
-          alt="taurillon"
-        />
+        <picture>
+          <source
+            srcset="assets/medias/medium/taurillon.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="assets/medias/medium/taurillon.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="assets/medias/medium/taurillon.jpg"
+            type="image/jpeg"
+          />
+          <img
+            class="about__picture-1"
+            src="assets/medias/medium/taurillon.jpg"
+            alt="taurillon"
+          />
+        </picture>
+
         <p class="about__text-1">
           Piotr Wojcik a choisi de poser son regard de peintre sur le petit et
           le gros bétail de nos campagnes françaises, traitant l’animal tant
@@ -54,11 +69,25 @@ import HomeFooter from "../layouts/HomeFooter.astro";
         </p>
       </div>
       <div class="about-container-2">
-        <img
-          class="about__picture-2"
-          src="assets/medias/medium/paysage3.jpg"
-          alt="paysage industriel"
-        />
+        <picture>
+          <source
+            srcset="assets/medias/medium/paysage3.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="assets/medias/medium/paysage3.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="assets/medias/medium/paysage3.jpg"
+            type="image/jpeg"
+          />
+          <img
+            class="about__picture-2"
+            src="assets/medias/medium/paysage3.jpg"
+            alt="paysage industriel"
+          />
+        </picture>
         <p class="about__text-2">
           Si l’on identifie avec certitude l’espèce de chaque animal, le
           traitement pictural dont il fait l’objet lui confère une filiation
