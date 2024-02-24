@@ -1,6 +1,6 @@
 ---
 // const { frontmatter: content, mySrc } = Astro.props
-const { srcJpegMedium, srcAvifMedium, type, alt, dimensions, price } =
+const { srcJpegMedium, srcAvifMedium, type, alt, dimensions, price, index } =
   Astro.props;
 ---
 
@@ -10,7 +10,7 @@ const { srcJpegMedium, srcAvifMedium, type, alt, dimensions, price } =
       <source srcset={srcAvifMedium} type="image/avif" />
       <source srcset={srcJpegMedium} type="image/webp" />
       <source srcset={srcJpegMedium} type="image/jpeg" />
-      <img src={srcJpegMedium} alt={alt} />
+      <img src={srcJpegMedium} alt={alt} loading={index > 12 ? "lazy" : "eager"} />
     </picture>
     <!-- <img class={type}
             src={srcJpegMedium}

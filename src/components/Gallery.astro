@@ -7,7 +7,7 @@ const reversedImages = [...images].reverse();
 
 <div class="gallery">
   {
-    reversedImages.map((elt: any) => (
+    reversedImages.map((elt: any, index: number) => (
       <GalleryItem
         srcJpegMedium={elt.frontmatter["img-jpeg-medium"]}
         srcAvifMedium={elt.frontmatter["img-avif-medium"]}
@@ -16,6 +16,7 @@ const reversedImages = [...images].reverse();
         alt={elt.frontmatter.alt}
         dimensions={elt.frontmatter.dimensions}
         price={elt.frontmatter.price}
+        index={index}
       />
     ))
   }
