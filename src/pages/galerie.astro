@@ -3,7 +3,6 @@ import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import Gallery from "../components/Gallery.astro";
 import Lightbox from "../components/Lightbox.astro";
-import Footer from "../layouts/Footer.astro";
 
 const images = await Astro.glob("./galleryItems/*.md");
 ---
@@ -35,7 +34,6 @@ const images = await Astro.glob("./galleryItems/*.md");
     </div>
     <Gallery images={images} />
   </main>
-  <Footer />
   <Lightbox />
   <div class="scroll-to-top">
     <img src="/assets/icons/chevron-up.svg" alt="Retour en haut de page" />
@@ -63,15 +61,6 @@ const images = await Astro.glob("./galleryItems/*.md");
   }
   .filter-button:hover {
     cursor: pointer;
-    opacity: 0.5;
-  }
-
-  .main-footer__social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-  }
-  .main-footer__social-icons li:hover {
     opacity: 0.5;
   }
 
