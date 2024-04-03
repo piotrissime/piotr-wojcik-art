@@ -1,17 +1,39 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+import instagram from "../assets/icons/instagram.svg";
+import facebook from "../assets/icons/facebook.svg";
 ---
 
 <header class="main-header">
-  <nav class="main-header__menu">
-    <a class={currentPath === "" ? "active" : ""} href="/">Accueil</a>
-    <a class={currentPath.includes("galerie") ? "active" : ""} href="/galerie/"
-      >Galerie</a
-    >
-    <a class={currentPath.includes("contact") ? "active" : ""} href="/contact/"
-      >Contact</a
-    >
+  <nav>
+    <ul class="main-header__menu">
+      <li>
+        <a class={currentPath === "" ? "active" : ""} href="/">Accueil</a>
+      </li>
+      <li>
+        <a
+          class={currentPath.includes("galerie") ? "active" : ""}
+          href="/galerie/">Galerie</a
+        >
+      </li>
+      <li>
+        <a
+          class={currentPath.includes("contact") ? "active" : ""}
+          href="/contact/">Contact</a
+        >
+      </li>
+      <li>
+        <a href="https://www.instagram.com/piotrwojcik.peintures/">
+          <img src={instagram} alt="Instagram." />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/piotr.wojcik.58152">
+          <img src={facebook} alt="Facebook." /></a
+        >
+      </li>
+    </ul>
   </nav>
 </header>
 <style>
@@ -19,9 +41,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
     display: flex;
     justify-content: flex-end;
     margin-right: 150px;
+    padding: 20px 0;
   }
 
   .main-header__menu {
+    margin-left: 0;
     display: flex;
     gap: 42px;
   }
@@ -40,10 +64,14 @@ const currentPath = pathname.slice(1); // remove the first "/"
   }
 
   @media all and (max-width: 555px) {
-    // About section
     .main-header {
       margin-right: 0;
-      justify-content: center;
+      display: block;
+    }
+
+    .main-header__menu {
+      gap: 0;
+      justify-content: space-around;
     }
   }
 </style>
