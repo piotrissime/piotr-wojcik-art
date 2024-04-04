@@ -1,7 +1,6 @@
 ---
 import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import Lightbox from "../components/Lightbox.astro";
 import GalleryComponent from "../components/GalleryComponent";
 
 const images = await Astro.glob("./galleryItems/*.md");
@@ -34,7 +33,6 @@ const images = await Astro.glob("./galleryItems/*.md");
     </div>
     <GalleryComponent images={images} client:load />
   </main>
-  <Lightbox />
   <div class="scroll-to-top">
     <img src="/assets/icons/chevron-up.svg" alt="Retour en haut de page" />
   </div>
