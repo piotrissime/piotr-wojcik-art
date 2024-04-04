@@ -1,8 +1,8 @@
 ---
 import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import Gallery from "../components/Gallery.astro";
 import Lightbox from "../components/Lightbox.astro";
+import GalleryComponent from "../components/GalleryComponent";
 
 const images = await Astro.glob("./galleryItems/*.md");
 ---
@@ -32,7 +32,7 @@ const images = await Astro.glob("./galleryItems/*.md");
         value="Dessins"
       />
     </div>
-    <Gallery images={images} />
+    <GalleryComponent images={images} client:load />
   </main>
   <Lightbox />
   <div class="scroll-to-top">
@@ -40,7 +40,7 @@ const images = await Astro.glob("./galleryItems/*.md");
   </div>
 </Layout>
 
-<script src="../scripts/gallery.js"></script>
+<!-- <script src="../scripts/gallery.js"></script> -->
 
 <style>
   .filter-options {
