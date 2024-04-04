@@ -13,8 +13,11 @@ export interface GalleryItemProps {
   originalHeight?: string;
   price?: number;
   srcJpegMedium?: string;
+  srcJpegLarge?: string;
   srcAvifMedium?: string;
+  srcAvifLarge?: string;
   srcWebpMedium?: string;
+  srcWebpLarge?: string;
   index: number;
 }
 
@@ -22,8 +25,11 @@ export default function GalleryItem({
   alt,
   type,
   srcJpegMedium,
+  srcJpegLarge,
   srcAvifMedium,
+  srcAvifLarge,
   srcWebpMedium,
+  srcWebpLarge,
   index,
   dimensions,
   originalWidth,
@@ -33,7 +39,8 @@ export default function GalleryItem({
   return (
     <article className="gallery__item picture">
       <Item
-        original={srcJpegMedium}
+        original={srcJpegLarge ? srcJpegLarge : srcJpegMedium}
+        originalSrcset={`${srcJpegLarge ? srcJpegLarge : srcJpegMedium}, ${srcAvifLarge ?? ''}, ${srcWebpLarge ?? ''}`}
         width={originalWidth}
         height={originalHeight}
         cropped

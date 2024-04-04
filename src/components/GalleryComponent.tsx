@@ -21,8 +21,11 @@ export default function GalleryComponent({ images }: GalleryProps) {
               imageSrc={image.frontmatter.cover}
               type={image.frontmatter.type}
               srcJpegMedium={image.frontmatter['img-jpeg-medium']}
+              srcJpegLarge={image.frontmatter['img-jpeg-large']}
               srcAvifMedium={image.frontmatter["img-avif-medium"]}
+              srcAvifLarge={image.frontmatter["img-avif-large"]}
               srcWebpMedium={image.frontmatter["img-webp-medium"]}
+              srcWebpLarge={image.frontmatter["img-webp-large"]}
               alt={image.frontmatter.alt}
               dimensions={image.frontmatter.dimensions}
               originalWidth={
