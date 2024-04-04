@@ -40,7 +40,6 @@ export default function GalleryItem({
     <article className="gallery__item picture">
       <Item
         original={srcJpegLarge ? srcJpegLarge : srcJpegMedium}
-        originalSrcset={`${srcJpegLarge ? srcJpegLarge : srcJpegMedium}, ${srcAvifLarge ?? ''}, ${srcWebpLarge ?? ''}`}
         width={originalWidth}
         height={originalHeight}
         cropped
