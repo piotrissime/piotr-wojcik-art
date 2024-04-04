@@ -40,7 +40,7 @@ const images = await Astro.glob("./galleryItems/*.md");
   </div>
 </Layout>
 
-<!-- <script src="../scripts/gallery.js"></script> -->
+<script src="../scripts/gallery.js"></script>
 
 <style>
   .filter-options {
@@ -91,5 +91,15 @@ const images = await Astro.glob("./galleryItems/*.md");
   }
   .scroll-to-top img {
     pointer-events: none;
+  }
+
+  /* Filter options */
+
+  .filter-active {
+    background: #292620;
+  }
+
+  .filter-button.filter-active:hover {
+    opacity: initial;
   }
 </style>

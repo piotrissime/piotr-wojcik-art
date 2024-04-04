@@ -39,12 +39,3 @@ svg path {
 body {
     font-family: 'Playfair Display', serif;
 }
-
-/* Filter options */
-.filter-active {
-    background: #292620;
-}
-
-.filter-button.filter-active:hover {
-    opacity: initial;
-}

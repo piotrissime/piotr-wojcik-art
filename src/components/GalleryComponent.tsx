@@ -19,6 +19,7 @@ export default function GalleryComponent({ images }: GalleryProps) {
               key={index}
               index={index}
               imageSrc={image.frontmatter.cover}
+              type={image.frontmatter.type}
               srcJpegMedium={image.frontmatter['img-jpeg-medium']}
               srcAvifMedium={image.frontmatter["img-avif-medium"]}
               srcWebpMedium={image.frontmatter["img-webp-medium"]}

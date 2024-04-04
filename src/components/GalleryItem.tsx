@@ -5,6 +5,7 @@ export interface GalleryItemProps {
   title?: string;
   imageSrc: any;
   alt: string;
+  type: string;
   dimensions?: string;
   material?: string;
   releaseDate?: string;
@@ -19,6 +20,7 @@ export interface GalleryItemProps {
 
 export default function GalleryItem({
   alt,
+  type,
   srcJpegMedium,
   srcAvifMedium,
   srcWebpMedium,
@@ -29,7 +31,7 @@ export default function GalleryItem({
   price
 }: GalleryItemProps) {
   return (
-    <article>
+    <article className="gallery__item picture">
       <Item
         original={srcJpegMedium}
         width={originalWidth}
@@ -43,7 +45,7 @@ export default function GalleryItem({
             ref={ref}
             onClick={open}
           >
-            <picture>
+            <picture className={type}>
               <source srcSet={srcAvifMedium} type="image/avif" />
               <source srcSet={srcWebpMedium} type="image/webp" />
               <source srcSet={srcJpegMedium} type="image/jpeg" />
