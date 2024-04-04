@@ -34,7 +34,7 @@ export default function GalleryItem({
         original={srcJpegMedium}
         width={originalWidth}
         height={originalHeight}
-        // cropped
+        cropped
         thumbnail={srcJpegMedium}
       >
         {({ ref, open }) => (
