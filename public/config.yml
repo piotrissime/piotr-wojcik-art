@@ -14,8 +14,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Image JPEG (700x700 max)", name: "img-jpeg-medium", widget: "image"}
-      - {label: "Largeur de l'image (en pixels)", name: "originalWidth", widget: "number"}
-      - {label: "Hauteur de l'image (en pixels)", name: "originalHeight", widget: "number"}
+      - {label: "Largeur de l'image (taille grande, en pixels)", name: "originalWidth", widget: "number"}
+      - {label: "Hauteur de l'image (taille grande, en pixels)", name: "originalHeight", widget: "number"}
       - {label: "Image JPEG (Taille large)", name: "img-jpeg-large", widget: "image", required: false}
       - {label: "Image AVIF (700x700 max)", name: "img-avif-medium", widget: "image",  required: false}
       - {label: "Image AVIF (Taille large)", name: "img-avif-large", widget: "image", required: false}
