@@ -6,24 +6,27 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Contact | Piotr Wojcik">
   <Header />
   <main>
-    <h1 class="contact-title">Me contacter</h1>
+    <h1 class="contact-title">Contact</h1>
+    <div class="contact-text">
+      <p>Intéressé par l'une de mes œuvres exposées dans la galerie&nbsp;?<br/> Ou peut-être avez-vous une idée spécifique en tête pour une peinture personnalisée&nbsp;?<br/> Vous souhaitez organiser une exposition ou simplement échanger sur mon travail&nbsp;?<br/> N'hésitez pas à me contacter en remplissant le formulaire ci-dessous.</p>
+    </div>
     <div class="contact-form">
       <form name="contact" action="/success/" method="POST" data-netlify="true">
         <div class="form-group">
           <label
-            ><span class="label-text">Votre nom :</span>
+            ><span class="label-text">Nom</span>
             <input type="text" name="name" required /></label
           >
         </div>
         <div class="form-group">
           <label
-            ><span class="label-text">Votre Email :</span>
+            ><span class="label-text">Email</span>
             <input type="email" name="email" required /></label
           >
         </div>
         <div class="form-group">
           <label
-            ><span class="label-text">Votre message :</span>
+            ><span class="label-text">Message</span>
             <textarea name="message" required></textarea></label
           >
         </div>
@@ -36,6 +39,15 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+  .contact-text {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    margin-top: 0;
+    max-width: 600px;
+    font-size: 1.3rem;
+  }
   main {
     padding: 0 16px;
   }
