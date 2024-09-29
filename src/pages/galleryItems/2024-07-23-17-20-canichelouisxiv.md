@@ -6,4 +6,5 @@ name: CanichelouisXIV
 type: black-white
 alt: Caniche
 dimensions: 62x40 cm
+price: 350
 ---
