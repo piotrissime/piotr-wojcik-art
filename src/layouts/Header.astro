@@ -2,7 +2,6 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 import instagram from "../assets/icons/instagram.svg";
-import facebook from "../assets/icons/facebook.svg";
 ---
 
 <header class="main-header">
@@ -27,11 +26,6 @@ import facebook from "../assets/icons/facebook.svg";
         <a href="https://www.instagram.com/piotrwojcik.peintures/">
           <img src={instagram.src} alt="Instagram." />
         </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/piotr.wojcik.58152">
-          <img src={facebook.src} alt="Facebook." /></a
-        >
       </li>
     </ul>
   </nav>
