@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
@@ -13,12 +15,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{name}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Image JPEG (700x700 max)", name: "img-jpeg-medium", widget: "image"}
-      - {label: "Image JPEG (Taille large)", name: "img-jpeg-large", widget: "image", required: false}
-      - {label: "Image AVIF (700x700 max)", name: "img-avif-medium", widget: "image",  required: false}
-      - {label: "Image AVIF (Taille large)", name: "img-avif-large", widget: "image", required: false}
-      - {label: "Image WebP (700x700 max)", name: "img-webp-medium", widget: "image",  required: false}
-      - {label: "Image WebP (Taille large)", name: "img-webp-large", widget: "image", required: false}
+      # TODO: rename “name” field. img-large would be more fitting. Then generate the thumbnail on the pipeline.
+      - {label: "Image", name: "img-jpeg-medium", widget: "image"}
       - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}
       - {label: "Texte alternatif (ex : Peinture de chat)", name: "alt", widget: "string"}
