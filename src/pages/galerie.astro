@@ -2,8 +2,10 @@
 import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import GalleryComponent from "../components/GalleryComponent";
+import { optimizeImages } from "../utils/imageOptimization";
 
 const images = await Astro.glob("./galleryItems/*.md");
+const optimizedImages = await optimizeImages(images);
 ---
 
 <Layout title="Galerie | Piotr Wojcik">
@@ -31,7 +33,7 @@ const images = await Astro.glob("./galleryItems/*.md");
         value="Dessins"
       />
     </div>
-    <GalleryComponent images={images} client:load />
+    <GalleryComponent images={optimizedImages} client:load />
   </main>
   <div class="scroll-to-top">
     <img src="/assets/icons/chevron-up.svg" alt="Retour en haut de page" />
