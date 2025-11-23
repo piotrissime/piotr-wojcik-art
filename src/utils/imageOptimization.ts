@@ -1,4 +1,3 @@
-// src/utils/imageOptimization.ts
 import { getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
@@ -24,34 +23,60 @@ export async function optimizeImages(images: any[]) {
           return image;
         }
 
-        const optimizedAvif = await getImage({
+        // Thumbnail size
+        const thumbnailAvif = await getImage({
           src: coverImage,
           format: "avif",
-          width: 600,
+          width: 400,
         });
 
-        const optimizedWebp = await getImage({
+        const thumbnailWebp = await getImage({
           src: coverImage,
           format: "webp",
-          width: 600,
+          width: 400,
         });
 
-        const optimizedJpeg = await getImage({
+        const thumbnailJpeg = await getImage({
           src: coverImage,
           format: "jpeg",
-          width: 600,
+          width: 400,
+        });
+
+        // Full resolution - use original width, or 1600px if larger
+        const fullWidth = Math.min(coverImage.width, 1600);
+
+        const fullAvif = await getImage({
+          src: coverImage,
+          format: "avif",
+          width: fullWidth,
+        });
+
+        const fullWebp = await getImage({
+          src: coverImage,
+          format: "webp",
+          width: fullWidth,
+        });
+
+        const fullJpeg = await getImage({
+          src: coverImage,
+          format: "jpeg",
+          width: fullWidth,
         });
 
         return {
           ...image,
           frontmatter: {
             ...image.frontmatter,
-            optimizedImages: {
-              avif: optimizedAvif.src,
-              webp: optimizedWebp.src,
-              jpeg: optimizedJpeg.src,
+            optimizedImagesThumbnail: {
+              avif: thumbnailAvif.src,
+              webp: thumbnailWebp.src,
+              jpeg: thumbnailJpeg.src,
             },
-            // Extract original dimensions from the image metadata
+            optimizedImagesFull: {
+              avif: fullAvif.src,
+              webp: fullWebp.src,
+              jpeg: fullJpeg.src,
+            },
             originalWidth: coverImage.width,
             originalHeight: coverImage.height,
           },

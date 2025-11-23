@@ -10,7 +10,12 @@ export interface GalleryItemProps {
   originalWidth?: string;
   originalHeight?: string;
   price?: number;
-  optimizedImages: {
+  optimizedImagesThumbnail: {
+    avif: string;
+    webp: string;
+    jpeg: string;
+  };
+  optimizedImagesFull: {
     avif: string;
     webp: string;
     jpeg: string;
@@ -20,7 +25,8 @@ export interface GalleryItemProps {
 export default function GalleryItem({
   alt,
   type,
-  optimizedImages,
+  optimizedImagesThumbnail,
+  optimizedImagesFull,
   index,
   dimensions,
   originalWidth,
@@ -30,16 +36,16 @@ export default function GalleryItem({
   return (
     <article className="gallery__item picture">
       <Item
-        original={optimizedImages.jpeg}
+        original={optimizedImagesFull.jpeg}
         width={originalWidth}
         height={originalHeight}
         cropped
-        thumbnail={optimizedImages.jpeg}
+        thumbnail={optimizedImagesThumbnail.jpeg}
       >
         {({ ref, open }) => (
           <div className={classes["image-container"]} ref={ref} onClick={open}>
             <OptimizedPicture
-              optimizedImages={optimizedImages}
+              optimizedImages={optimizedImagesThumbnail}
               alt={alt}
               loading={index > 12 ? "lazy" : "eager"}
               className={type}

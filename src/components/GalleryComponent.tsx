@@ -17,7 +17,10 @@ export default function GalleryComponent({ images }: GalleryProps) {
           <GalleryItem
             key={index}
             index={index}
-            optimizedImages={image.frontmatter.optimizedImages}
+            optimizedImagesThumbnail={
+              image.frontmatter.optimizedImagesThumbnail
+            }
+            optimizedImagesFull={image.frontmatter.optimizedImagesFull}
             type={image.frontmatter.type}
             alt={image.frontmatter.alt}
             dimensions={image.frontmatter.dimensions}
