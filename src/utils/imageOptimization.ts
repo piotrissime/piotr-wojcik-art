@@ -24,22 +24,24 @@ export async function optimizeImages(images: any[]) {
         }
 
         // Thumbnail size
+        const thumbnailWidth = Math.min(coverImage.width, 600);
+
         const thumbnailAvif = await getImage({
           src: coverImage,
           format: "avif",
-          width: 400,
+          width: thumbnailWidth,
         });
 
         const thumbnailWebp = await getImage({
           src: coverImage,
           format: "webp",
-          width: 400,
+          width: thumbnailWidth,
         });
 
         const thumbnailJpeg = await getImage({
           src: coverImage,
           format: "jpeg",
-          width: 400,
+          width: thumbnailWidth,
         });
 
         // Full resolution - use original width, or 1600px if larger

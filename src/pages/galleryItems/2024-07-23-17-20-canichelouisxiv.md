@@ -1,10 +1,8 @@
 ---
-img-jpeg-medium: /assets/medias/medium/can.jpg
-originalWidth: 800
-originalHeight: 527
 name: CanichelouisXIV
 type: black-white
 alt: Caniche
-dimensions: 62x40 cm
+dimensions: 62x40cm
 price: 350
+imgSrc: src/assets/images/can.jpg
 ---

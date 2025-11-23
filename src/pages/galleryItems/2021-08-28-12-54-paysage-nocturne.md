@@ -1,8 +1,7 @@
 ---
-img-jpeg-medium: /assets/medias/medium/paysage1.jpg
 name: paysage-nocturne
 type: colour
 alt: Peinture de paysage nocturne
-originalWidth: "700"
-originalHeight: "475"
+imgSrc: src/assets/images/paysage1.jpg
+price: 300
 ---

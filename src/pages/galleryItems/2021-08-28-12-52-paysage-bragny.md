@@ -1,10 +1,8 @@
 ---
-img-jpeg-medium: /assets/medias/medium/pastoralebragny.jpg
-originalWidth: "700"
-originalHeight: "493"
 name: paysage-bragny
 type: black-white
 alt: Paysage en noir et blanc.
-dimensions: 150x200 cm
+dimensions: 150x200cm
 price: 1600
+imgSrc: src/assets/images/pastoralebragny.jpg
 ---
