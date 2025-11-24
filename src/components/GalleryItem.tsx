@@ -1,62 +1,55 @@
 import { Item } from "react-photoswipe-gallery";
-import classes from './GalleryItem.module.css'
+import classes from "./GalleryItem.module.css";
+import OptimizedPicture from "./OptimizedPicture";
 
 export interface GalleryItemProps {
-  title?: string;
-  imageSrc: any;
   alt: string;
   type: string;
+  index: number;
   dimensions?: string;
-  material?: string;
-  releaseDate?: string;
   originalWidth?: string;
   originalHeight?: string;
   price?: number;
-  srcJpegMedium?: string;
-  srcJpegLarge?: string;
-  srcAvifMedium?: string;
-  srcAvifLarge?: string;
-  srcWebpMedium?: string;
-  srcWebpLarge?: string;
-  index: number;
+  optimizedImagesThumbnail: {
+    avif: string;
+    webp: string;
+    jpeg: string;
+  };
+  optimizedImagesFull: {
+    avif: string;
+    webp: string;
+    jpeg: string;
+  };
 }
 
 export default function GalleryItem({
   alt,
   type,
-  srcJpegMedium,
-  srcJpegLarge,
-  srcAvifMedium,
-  srcAvifLarge,
-  srcWebpMedium,
-  srcWebpLarge,
+  optimizedImagesThumbnail,
+  optimizedImagesFull,
   index,
   dimensions,
   originalWidth,
   originalHeight,
-  price
+  price,
 }: GalleryItemProps) {
   return (
     <article className="gallery__item picture">
       <Item
-        original={srcJpegLarge ? srcJpegLarge : srcJpegMedium}
+        original={optimizedImagesFull.jpeg}
         width={originalWidth}
         height={originalHeight}
         cropped
-        thumbnail={srcJpegMedium}
+        thumbnail={optimizedImagesThumbnail.jpeg}
       >
         {({ ref, open }) => (
-          <div
-            className={classes['image-container']}
-            ref={ref}
-            onClick={open}
-          >
-            <picture className={type}>
-              <source srcSet={srcAvifMedium} type="image/avif" />
-              <source srcSet={srcWebpMedium} type="image/webp" />
-              <source srcSet={srcJpegMedium} type="image/jpeg" />
-              <img src={srcJpegMedium} alt={alt} loading={index > 12 ? "lazy" : "eager"} />
-            </picture>
+          <div className={classes["image-container"]} ref={ref} onClick={open}>
+            <OptimizedPicture
+              optimizedImages={optimizedImagesThumbnail}
+              alt={alt}
+              loading={index > 12 ? "lazy" : "eager"}
+              className={type}
+            />
           </div>
         )}
       </Item>
@@ -65,5 +58,5 @@ export default function GalleryItem({
         <p className={classes.price}>{price && price + " €"}</p>
       </div>
     </article>
-  )
+  );
 }

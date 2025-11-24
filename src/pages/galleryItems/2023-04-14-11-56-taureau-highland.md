@@ -1,10 +1,8 @@
 ---
-img-jpeg-medium: /assets/medias/medium/1681473238002.jpg
-originalWidth: "800"
-originalHeight: "807"
 name: taureau highland
 type: black-white
 alt: taureau
-dimensions: 100 x 100 cm
+dimensions: 100x100cm
 price: 600
+imgSrc: src/assets/images/1681473238002.jpg
 ---

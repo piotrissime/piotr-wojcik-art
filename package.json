@@ -10,16 +10,16 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^4.5.15"
+    "astro": "^5.16.0"
   },
   "dependencies": {
-    "@astrojs/react": "^3.1.1",
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
-    "photoswipe": "^5.4.3",
+    "@astrojs/react": "^4.4.2",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "photoswipe": "^5.4.4",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-photoswipe-gallery": "^3.0.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-photoswipe-gallery": "^3.1.1"
   }
 }
