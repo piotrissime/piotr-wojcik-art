@@ -14,7 +14,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       # TODO: rename “name” field. img-large would be more fitting. Then generate the thumbnail on the pipeline.
-      - {label: "Image", name: "img-jpeg-medium", widget: "image"}
+      - {label: "Image", name: "imgSrc", widget: "image"}
       - {label: "Nom de l'image (ne sera pas visible, utilisé pour les fichiers .md)", name: "name", widget: "string"}
       - {label: "Catégorie", name: "type", widget: "select", options: ["black-white", "colour", "drawing", "other"]}
       - {label: "Texte alternatif (ex : Peinture de chat)", name: "alt", widget: "string"}
