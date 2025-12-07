@@ -11,8 +11,16 @@ const optimizedImages = await optimizeImages(images);
 ---
 
 <Layout title="Galerie | Piotr Wojcik">
-  <Header currentPath={currentPath}  />
+  <Header currentPath={currentPath} />
   <main>
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-16 animate-fade-in">
+      <h1 class="text-5xl font-serif font-bold text-foreground">Galerie</h1>
+      <p class="text-lg text-muted-foreground">
+        Découvrez une sélection d'œuvres représentant la beauté du bétail
+        français
+      </p>
+    </div>
+
     <div class="filter-options">
       <input
         class="filter-options__all filter-button filter-active"

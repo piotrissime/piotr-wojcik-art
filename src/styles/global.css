@@ -71,3 +71,7 @@ p {
   --color-input: hsl(0 0% 88%);
   --color-ring: hsl(0 0% 25%);
 }
+
+main {
+  margin-top: 6rem;
+}
