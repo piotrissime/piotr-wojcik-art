@@ -7,11 +7,23 @@ import taurillonJpg from "../assets/images/taurillon.jpg";
 import paysage3Avif from "../assets/images/paysage3.avif";
 import paysage3WebP from "../assets/images/paysage3.webp";
 import paysage3Jpg from "../assets/images/paysage3.jpg";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import AboutSection from "../components/AboutSection.astro";
+import CommissionCTA from "../components/CommissionCTA.astro";
+import LatestWorks from "../components/LatestWorks.astro";
 ---
 
 <Layout title="Accueil | Piotr Wojcik">
   <Header />
-  <div class="wrapper">
+  <main>
+      <Hero />
+      <AboutSection />
+      <LatestWorks />
+      <CommissionCTA />
+  </main>
+  <Footer />
+  <!-- <div class="wrapper">
     <main class="home-main-content">
       <div class="hero">
         <div class="hero__text">
@@ -91,7 +103,7 @@ import paysage3Jpg from "../assets/images/paysage3.jpg";
         </div>
       </section>
     </main>
-  </div>
+  </div> -->
 </Layout>
 
 <style>
