@@ -35,7 +35,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
 
             <div className="flex items-center gap-3 ml-4 pl-4 border-l border-border">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/piotrwojcik.peintures"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
@@ -43,9 +43,14 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
                 <Instagram className="h-4 w-4" />
               </a>
 
-              <button className="hover:bg-accent/10 p-2 rounded hover:text-accent">
+              <a
+                href="https://www.artmajeur.com/piotr-wojcik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-accent/10 p-2 rounded hover:text-accent"
+              >
                 <ShoppingCart className="h-4 w-4" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -89,7 +94,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
 
             <div className="flex items-center gap-3 pt-2 border-t border-border">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/piotrwojcik.peintures"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
@@ -97,9 +102,14 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
                 <Instagram className="h-4 w-4" />
               </a>
 
-              <button className="hover:bg-accent/10 p-2 rounded hover:text-accent">
+              <a
+                href="https://www.artmajeur.com/piotr-wojcik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:bg-accent/10 p-2 rounded hover:text-accent"
+              >
                 <ShoppingCart className="h-4 w-4" />
-              </button>
+              </a>
             </div>
           </div>
         )}
