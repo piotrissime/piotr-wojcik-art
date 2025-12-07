@@ -64,13 +64,11 @@ const optimizedImages = await optimizeImages(images);
   }
 
   .filter-button {
-    border: 1px solid black;
+    border: 1px solid #c9c9c9;
     background: transparent;
     color: black;
     padding: 4px 12px;
     border-radius: 6px;
-    font-size: 1.4rem;
-    font-family: "Playfair Display", serif;
   }
   .filter-button:hover {
     cursor: pointer;
@@ -80,7 +78,7 @@ const optimizedImages = await optimizeImages(images);
   .scroll-to-top {
     position: fixed;
     right: 2rem;
-    background-color: rgb(216, 220, 221);
+    background-color: white;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -90,6 +88,7 @@ const optimizedImages = await optimizeImages(images);
     transition: all 0.4s;
     opacity: 0;
     bottom: 0rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .scroll-to-top_active {
     opacity: 1;
