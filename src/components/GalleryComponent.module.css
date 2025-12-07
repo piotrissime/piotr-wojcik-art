@@ -5,4 +5,11 @@
   gap: 40px;
   margin-top: 20px;
   margin-bottom: 70px;
+  /* Throwing random styles */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* I don't know why, 100 looks good? */
+  max-width: 100rem;
 }
