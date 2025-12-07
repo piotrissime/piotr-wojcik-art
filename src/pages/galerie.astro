@@ -1,15 +1,17 @@
 ---
-import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import GalleryComponent from "../components/GalleryComponent";
 import { optimizeImages } from "../utils/imageOptimization";
+import { Header } from "../components/Header";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 
 const images = await Astro.glob("./galleryItems/*.md");
 const optimizedImages = await optimizeImages(images);
 ---
 
 <Layout title="Galerie | Piotr Wojcik">
-  <Header />
+  <Header currentPath={currentPath}  />
   <main>
     <div class="filter-options">
       <input

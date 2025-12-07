@@ -1,56 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../layouts/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Header } from "../components/Header";
 import Hero from "../components/Hero.astro";
 import AboutSection from "../components/AboutSection.astro";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 import CommissionCTA from "../components/CommissionCTA.astro";
 import LatestWorks from "../components/LatestWorks.astro";
 ---
 
 <Layout title="Accueil | Piotr Wojcik">
-  <Header />
+  <Header currentPath={currentPath} />
   <main>
       <Hero />
       <AboutSection />
-      <LatestWorks />
-      <CommissionCTA />
+      <!-- <LatestWorks />
+      <CommissionCTA /> -->
   </main>
-  <Footer />
-  <!-- <div class="wrapper">
-    <main class="home-main-content">
-      <div class="hero">
-        <div class="hero__text">
-          <h1>Piotr Wojcik</h1>
-          <p>Peintures - Gravures - Dessins</p>
-        </div>
-        <div class="hero__image">
-          <picture>
-            <source
-              srcset="assets/medias/large/exhibition-london.avif"
-              type="image/avif"
-            />
-            <source
-              srcset="assets/medias/large/exhibition-london.webp"
-              type="image/webp"
-            />
-            <source
-              srcset="assets/medias/large/exhibition-london.jpg"
-              type="image/jpeg"
-            />
-            <img
-              src="assets/medias/large/exhibition-london.jpg"
-              width="580"
-              height="435 "
-              alt="Piotr Wojcik dans une salle d'exposition"
-            />
-          </picture>
-        </div>
-      </div>
-
-
-    </main>
-  </div> -->
+  <!-- <Footer /> -->
 </Layout>
 
 <style>
