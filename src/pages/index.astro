@@ -11,7 +11,7 @@ import LatestWorks from "../components/LatestWorks.astro";
 ---
 
 <Layout title="Accueil | Piotr Wojcik">
-  <Header currentPath={currentPath} />
+  <Header client:load currentPath={currentPath} />
   <main>
       <Hero />
       <AboutSection />
