@@ -16,8 +16,7 @@ const optimizedImages = await optimizeImages(images);
     <div class="max-w-3xl mx-auto text-center space-y-4 mb-16 animate-fade-in">
       <h1 class="text-5xl font-serif font-bold text-foreground">Galerie</h1>
       <p class="text-lg text-muted-foreground">
-        Découvrez une sélection d'œuvres représentant la beauté du bétail
-        français
+        Découvrez mes peintures : animaux, scènes rurales et créations inspirées.
       </p>
     </div>
 
@@ -65,10 +64,11 @@ const optimizedImages = await optimizeImages(images);
   }
 
   .filter-button {
-    border: none;
+    border: 1px solid black;
     background: transparent;
-    color: white;
-    border-radius: 2px;
+    color: black;
+    padding: 4px 6px;
+    border-radius: 6px;
     font-size: 1.4rem;
     font-family: "Playfair Display", serif;
   }
@@ -80,7 +80,7 @@ const optimizedImages = await optimizeImages(images);
   .scroll-to-top {
     position: fixed;
     right: 2rem;
-    background-color: antiquewhite;
+    background-color: rgb(216, 220, 221);
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -110,6 +110,7 @@ const optimizedImages = await optimizeImages(images);
 
   .filter-active {
     background: #292620;
+    color: white;
   }
 
   .filter-button.filter-active:hover {
