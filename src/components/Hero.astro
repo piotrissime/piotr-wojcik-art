@@ -11,7 +11,7 @@
     }}
   >
     <div
-      class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/70"
+      class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/70 hotfix"
     >
     </div>
   </div>
@@ -23,7 +23,7 @@
       >
         Piotr Wojcik
       </h1>
-      <p class="text-xl md:text-2xl text-primary-foreground/90 font-light">
+      <p class="text-xl md:text-2xl text-primary-foreground-90 font-light">
         Peintures · Gravures · Dessins
       </p>
       <p class="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
@@ -31,20 +31,277 @@
         une technique unique mêlant eau, huile et colle.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-        <button
-          class="bg-accent hover:bg-accent/90 text-accent-foreground"
-        >
-          <a href="/galerie">
-            Découvrir la galerie
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
-        </button>
-        <button
-          class="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-        >
-          <a href="/contact"> Commander une œuvre </a>
-        </button>
+        <a href="/galerie" class="gallery-button">
+          Découvrir la galerie
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right ml-2 h-4 w-4"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+          > -->
+        </a>
+        <a href="contact" class="contact-button"> Commander une œuvre </a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hotfix {
+    background-image: linear-gradient(
+      to bottom right,
+      hsl(0 0% 8% / 0.9),
+      hsl(0 0% 8% / 0.8),
+      hsl(0 0% 15% / 0.7)
+    );
+  }
+
+  .gallery-button {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      Segoe UI Symbol,
+      "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 25%;
+    --radius: 0.5rem;
+    --gallery-bg: 0 0% 98%;
+    --hero-overlay: 0 0% 8%;
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(0 0% 5% / 0.92),
+      hsl(0 0% 15% / 0.88)
+    );
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    --tw-space-y-reverse: 0;
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --tw-contain-size: ;
+    --tw-contain-layout: ;
+    --tw-contain-paint: ;
+    --tw-contain-style: ;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: hsl(var(--border));
+    text-decoration: inherit;
+    display: inline-flex;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: calc(var(--radius) - 2px);
+    background-color: hsl(var(--accent));
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: hsl(var(--accent-foreground));
+    --tw-ring-offset-color: hsl(var(--background));
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+  }
+
+  .contact-button {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      Segoe UI Symbol,
+      "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 25%;
+    --radius: 0.5rem;
+    --gallery-bg: 0 0% 98%;
+    --hero-overlay: 0 0% 8%;
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(0 0% 5% / 0.92),
+      hsl(0 0% 15% / 0.88)
+    );
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    --tw-space-y-reverse: 0;
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --tw-contain-size: ;
+    --tw-contain-layout: ;
+    --tw-contain-paint: ;
+    --tw-contain-style: ;
+    box-sizing: border-box;
+    border-style: solid;
+    text-decoration: inherit;
+    display: inline-flex;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: calc(var(--radius) - 2px);
+    border-width: 1px;
+    border-color: hsl(var(--primary-foreground) / 0.3);
+    background-color: hsl(var(--primary-foreground) / 0.1);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: hsl(var(--primary-foreground));
+    --tw-ring-offset-color: hsl(var(--background));
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+  }
+</style>
