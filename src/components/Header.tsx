@@ -12,7 +12,8 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 py-4">
+      {/* max-w-1400 ajouté à la main rapidement... */}
+      <div className="container mx-auto max-w-1400 px-4 py-4">
         <nav className="flex items-center justify-between">
           <a
             href="/"
