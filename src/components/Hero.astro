@@ -1,1 +1,50 @@
-<p>Hero</p>
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <div
+    class="absolute inset-0 z-0"
+    style={{
+      backgroundImage:
+        "url('https://piotrwojcik.fr/assets/medias/large/exhibition-london.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/70"
+    >
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 z-10 text-center">
+    <div class="max-w-4xl mx-auto space-y-8 animate-fade-in">
+      <h1
+        class="text-5xl md:text-7xl font-playfair font-bold text-primary-foreground leading-tight"
+      >
+        Piotr Wojcik
+      </h1>
+      <p class="text-xl md:text-2xl text-primary-foreground/90 font-light">
+        Peintures · Gravures · Dessins
+      </p>
+      <p class="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+        Artiste peintre capturant la beauté intemporelle du bétail français avec
+        une technique unique mêlant eau, huile et colle.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+        <button
+          class="bg-accent hover:bg-accent/90 text-accent-foreground"
+        >
+          <a href="/galerie">
+            Découvrir la galerie
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </button>
+        <button
+          class="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
+        >
+          <a href="/contact"> Commander une œuvre </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
