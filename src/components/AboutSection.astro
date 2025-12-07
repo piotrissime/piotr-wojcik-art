@@ -1,1 +1,81 @@
-<p>AboutSection</p>
+---
+import taurillonAvif from "../assets/images/taurillon.avif";
+import taurillonWebP from "../assets/images/taurillon.webp";
+import taurillonJpg from "../assets/images/taurillon.jpg";
+import paysage3Avif from "../assets/images/paysage3.avif";
+import paysage3WebP from "../assets/images/paysage3.webp";
+import paysage3Jpg from "../assets/images/paysage3.jpg";
+---
+
+<section class="py-24 bg-card">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      <div class="space-y-6 animate-fade-in">
+        <h2 class="text-4xl font-serif font-bold text-foreground">
+          Une passion pour l'animal
+        </h2>
+        <div class="space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            Piotr Wojcik a choisi de poser son regard de peintre sur le petit et
+            le gros bétail de nos campagnes françaises, traitant l'animal tant
+            pour sa beauté plastique que pour la charge émotionnelle dont il est
+            porteur.
+          </p>
+          <p>
+            Suidés, bovidés, ovinés et autres gallinacés sont ainsi poursuivis
+            par l'artiste qui se livre hebdomadairement à une véritable « chasse
+            aux modèles », débusquant ses sujets dans les fermes et les
+            pâturages de la région.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl animate-fade-in-scale"
+      >
+        <img
+          src={taurillonJpg.src}
+          alt="Taurillon"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+    </div>
+
+    <div
+      class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mt-24"
+    >
+      <div
+        class="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl order-2 md:order-1 animate-fade-in-scale"
+      >
+        <img
+          src={paysage3Jpg.src}
+          alt="Paysage industriel"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+
+      <div class="space-y-6 order-1 md:order-2 animate-fade-in">
+        <h2 class="text-4xl font-serif font-bold text-foreground">
+          L'héritage silésien
+        </h2>
+        <div class="space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            Si l'on identifie avec certitude l'espèce de chaque animal, le
+            traitement pictural dont il fait l'objet lui confère une filiation
+            toute polonaise. Originaire de Silésie, Piotr Wojcik en a connu la
+            rude atmosphère minière, privant la ville et la campagne de toute
+            couleur.
+          </p>
+          <p>
+            Cette grisaille silésienne plane dans ses peintures, transcrite par
+            une gamme chromatique très réduite. La virtuosité de la technique, à
+            base d'eau, d'huile et de colle, joue sur des phénomènes
+            d'apparitions. Surgit de l'ombre, l'animal sort de l'obscurité,
+            mémoire du peintre, pour apparaître dans la clarté d'un présent lui
+            donnant un certain air de famille…
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
