@@ -1,10 +1,12 @@
 ---
-import Header from "../layouts/Header.astro";
+import { Header } from "../components/Header";
 import Layout from "../layouts/Layout.astro";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <Layout title="Success" noIndex={true}>
-  <Header />
+  <Header client:load currentPath={currentPath} />
   <main>
     <p class="success-message">Votre message a bien été envoyé, merci !</p>
   </main>

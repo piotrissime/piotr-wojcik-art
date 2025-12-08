@@ -3,6 +3,8 @@ import classes from "./GalleryComponent.module.css";
 import { Gallery } from "react-photoswipe-gallery";
 import GalleryItem from "./GalleryItem";
 
+// TODO: bug found -> Filter to "colors" and swap some images ; some black and white images will show.
+
 interface GalleryProps {
   images: any;
 }

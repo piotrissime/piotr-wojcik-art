@@ -1,113 +1,190 @@
 ---
-import Header from "../layouts/Header.astro";
+import { Header } from "../components/Header";
 import Layout from "../layouts/Layout.astro";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <Layout title="Contact | Piotr Wojcik">
-  <Header />
+  <Header client:load currentPath={currentPath} />
   <main>
-    <h1 class="contact-title">Contact</h1>
-    <div class="contact-text">
-      <p>Intéressé par l'une de mes œuvres exposées dans la galerie&nbsp;?<br/> Ou peut-être avez-vous une idée spécifique en tête pour une peinture personnalisée&nbsp;?<br/> Vous souhaitez organiser une exposition ou simplement échanger sur mon travail&nbsp;?<br/> N'hésitez pas à me contacter en remplissant le formulaire ci-dessous.</p>
-    </div>
-    <div class="contact-form">
-      <form name="contact" action="/success/" method="POST" data-netlify="true">
-        <div class="form-group">
-          <label
-            ><span class="label-text">Nom</span>
-            <input type="text" name="name" required /></label
+    <section>
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center space-y-4 mb-12 animate-fade-in">
+            <h1 class="text-5xl font-serif font-bold text-foreground">
+              Contact
+            </h1>
+            <p class="text-lg text-muted-foreground">
+              Une question ou un projet ? N'hésitez pas à me contacter.
+            </p>
+          </div>
+
+          <div
+            class="card rounded-lg border bg-card text-card-foreground shadow-sm p-8 animate-fade-in-scale"
           >
+            <form
+              name="contact"
+              action="/success/"
+              method="POST"
+              data-netlify="true"
+              class="space-y-6"
+            >
+              <div>
+                <label for="email" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="votre@email.com"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2"
+                  required
+                />
+              </div>
+              <div>
+                <label for="message" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Votre message</label>
+                <textarea
+                  id="message"
+                  placeholder="Décrivez votre projet ou posez votre question..."
+                  class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-2 min-h-[200px]"
+                  required></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label
-            ><span class="label-text">Email</span>
-            <input type="email" name="email" required /></label
-          >
-        </div>
-        <div class="form-group">
-          <label
-            ><span class="label-text">Message</span>
-            <textarea name="message" required></textarea></label
-          >
-        </div>
-        <p>
-          <button type="submit">Envoyer</button>
-        </p>
-      </form>
-    </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  .contact-text {
-    display: flex;
-    justify-content: center;
+  .card {
+    border-color: rgb(224, 224, 224);
   }
-  p {
-    margin-top: 0;
-    max-width: 600px;
-    font-size: 1.3rem;
-  }
-  main {
-    padding: 0 16px;
-  }
-  
-  /* Contact form */
-  .contact-form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  label, input, button, textarea {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji" !important;
   }
 
-  .contact-form form {
-    width: 600px;
-  }
-
-  .form-group {
-    margin-bottom: 1.4rem;
-  }
-
-  .label-text {
-    display: inline-block;
-    margin-bottom: 0.4rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    border-radius: 2px;
-    border: none;
-    height: 35px;
-    width: 100%;
-    background: #615a4e;
-    color: white;
-    padding-left: 8px;
-  }
-
-  .contact-form textarea {
-    height: 200px;
-    resize: none;
-  }
-
-  .contact-form button {
-    background: #615a4e;
-    color: white;
-    border: none;
-    padding: 7px 15px;
-    font-family: "Playfair Display", serif;
-    font-weight: bold;
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
-  /* Layout */
-  .contact-title {
-    text-align: center;
-  }
-  .contact-info {
-    text-align: center;
-    font-family: "Playfair Display", serif;
-  }
-  form button:hover {
+  button {
+        -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 25%;
+    --radius: .5rem;
+    --gallery-bg: 0 0% 98%;
+    --hero-overlay: 0 0% 8%;
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5% / .92), hsl(0 0% 15% / .88));
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
+    --transition-smooth: all .4s cubic-bezier(.4, 0, .2, 1);
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-color: rgb(59 130 246 / .5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --tw-contain-size: ;
+    --tw-contain-layout: ;
+    --tw-contain-paint: ;
+    --tw-contain-style: ;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: hsl(var(--border));
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    margin: 0;
+    text-transform: none;
+    -webkit-appearance: button;
+    background-image: none;
     cursor: pointer;
-    opacity: 0.8;
+    display: inline-flex;
+    height: 2.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    white-space: nowrap;
+    border-radius: calc(var(--radius) - 2px);
+    background-color: hsl(var(--accent));
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: hsl(var(--accent-foreground));
+    --tw-ring-offset-color: hsl(var(--background));
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 </style>

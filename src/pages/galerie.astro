@@ -1,16 +1,25 @@
 ---
-import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import GalleryComponent from "../components/GalleryComponent";
 import { optimizeImages } from "../utils/imageOptimization";
+import { Header } from "../components/Header";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 
 const images = await Astro.glob("./galleryItems/*.md");
 const optimizedImages = await optimizeImages(images);
 ---
 
 <Layout title="Galerie | Piotr Wojcik">
-  <Header />
+  <Header client:load currentPath={currentPath} />
   <main>
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-16 animate-fade-in">
+      <h1 class="text-5xl font-serif font-bold text-foreground">Galerie</h1>
+      <p class="text-lg text-muted-foreground">
+        Découvrez mes peintures : animaux, scènes rurales et créations inspirées.
+      </p>
+    </div>
+
     <div class="filter-options">
       <input
         class="filter-options__all filter-button filter-active"
@@ -55,12 +64,11 @@ const optimizedImages = await optimizeImages(images);
   }
 
   .filter-button {
-    border: none;
+    border: 1px solid #c9c9c9;
     background: transparent;
-    color: white;
-    border-radius: 2px;
-    font-size: 1.4rem;
-    font-family: "Playfair Display", serif;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 6px;
   }
   .filter-button:hover {
     cursor: pointer;
@@ -70,7 +78,7 @@ const optimizedImages = await optimizeImages(images);
   .scroll-to-top {
     position: fixed;
     right: 2rem;
-    background-color: antiquewhite;
+    background-color: white;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -80,6 +88,7 @@ const optimizedImages = await optimizeImages(images);
     transition: all 0.4s;
     opacity: 0;
     bottom: 0rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .scroll-to-top_active {
     opacity: 1;
@@ -100,6 +109,7 @@ const optimizedImages = await optimizeImages(images);
 
   .filter-active {
     background: #292620;
+    color: white;
   }
 
   .filter-button.filter-active:hover {
