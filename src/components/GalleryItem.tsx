@@ -6,7 +6,9 @@ export interface GalleryItemProps {
   alt: string;
   type: string;
   index: number;
-  dimensions?: string;
+  artWidth?: number;
+  artHeight?: number;
+  unit?: string;
   originalWidth?: string;
   originalHeight?: string;
   price?: number;
@@ -28,7 +30,9 @@ export default function GalleryItem({
   optimizedImagesThumbnail,
   optimizedImagesFull,
   index,
-  dimensions,
+  artWidth,
+  artHeight,
+  unit,
   originalWidth,
   originalHeight,
   price,
@@ -54,7 +58,11 @@ export default function GalleryItem({
         )}
       </Item>
       <div className={classes["image-description"]}>
-        <p className={classes.dimensions}>{dimensions}</p>
+        {artWidth && artHeight && (
+          <p className={classes.dimensions}>
+            {artWidth} × {artHeight} {unit}
+          </p>
+        )}
         <p className={classes.price}>{price && price + " €"}</p>
       </div>
     </article>
