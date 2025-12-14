@@ -56,3 +56,9 @@ collections:
           widget: "number",
           required: false,
         }
+      - {
+          label: "Lien d’achat",
+          name: "buyLink",
+          widget: "string",
+          required: false,
+        }
