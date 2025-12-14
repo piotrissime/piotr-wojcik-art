@@ -46,7 +46,8 @@ collections:
       - {
           label: "Unité",
           name: "unit",
-          widget: "string",
+          widget: "select",
+          options: ["cm", "m"],
           required: false,
           default: cm,
         }
