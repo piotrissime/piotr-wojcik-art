@@ -25,7 +25,9 @@ export default function GalleryComponent({ images }: GalleryProps) {
             optimizedImagesFull={image.frontmatter.optimizedImagesFull}
             type={image.frontmatter.type}
             alt={image.frontmatter.alt}
-            dimensions={image.frontmatter.dimensions}
+            artWidth={image.frontmatter.artWidth}
+            artHeight={image.frontmatter.artHeight}
+            unit={image.frontmatter.unit}
             originalWidth={image.frontmatter.originalWidth}
             originalHeight={image.frontmatter.originalHeight}
             price={image.frontmatter.price}
