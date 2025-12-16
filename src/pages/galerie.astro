@@ -20,28 +20,6 @@ const optimizedImages = await optimizeImages(images);
       </p>
     </div>
 
-    <div class="filter-options">
-      <input
-        class="filter-options__all filter-button filter-active"
-        type="button"
-        value="Tous"
-      />
-      <input
-        class="filter-options__black-white filter-button"
-        type="button"
-        value="Peintures noir et blanc"
-      />
-      <input
-        class="filter-options__colour filter-button"
-        type="button"
-        value="Peintures couleur"
-      />
-      <input
-        class="filter-options__drawings filter-button"
-        type="button"
-        value="Dessins"
-      />
-    </div>
     <GalleryComponent images={optimizedImages} client:load />
   </main>
   <div class="scroll-to-top">
@@ -55,25 +33,7 @@ const optimizedImages = await optimizeImages(images);
   main {
     padding: 0 16px;
   }
-  .filter-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-  }
-
-  .filter-button {
-    border: 1px solid #c9c9c9;
-    background: transparent;
-    color: black;
-    padding: 4px 12px;
-    border-radius: 6px;
-  }
-  .filter-button:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
+ 
 
   .scroll-to-top {
     position: fixed;
@@ -103,16 +63,5 @@ const optimizedImages = await optimizeImages(images);
   }
   .scroll-to-top img {
     pointer-events: none;
-  }
-
-  /* Filter options */
-
-  .filter-active {
-    background: #292620;
-    color: white;
-  }
-
-  .filter-button.filter-active:hover {
-    opacity: initial;
   }
 </style>
