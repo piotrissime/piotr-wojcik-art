@@ -1,8 +1,14 @@
+.gallery-item {
+  border-color: #e5e7eb;
+  border-radius: 0.5rem;
+  border-width: 1px;
+}
+
 .image-container {
   width: 100%;
   aspect-ratio: 1 / 1; /* Pray for a square. */
   background-color: #3d3932;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   overflow: hidden;
 }
 
@@ -17,9 +23,26 @@
   opacity: 0.8;
 }
 
+.title {
+  font-weight: 600;
+}
+
 .image-description {
+  padding: 24px;
+}
+
+.dimensions-price {
   display: flex;
   justify-content: space-between;
+}
+
+.dimensions {
+  color: hsl(0, 0%, 45%);
+  font-size: 0.875rem;
+}
+
+.price {
+  color: hsl(0, 0%, 8%);
 }
 
 .image-description p {
