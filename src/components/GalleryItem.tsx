@@ -41,6 +41,10 @@ export default function GalleryItem({
   title,
   buyLink,
 }: GalleryItemProps) {
+  function formatNumber(num: number) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
   return (
     <article className={classes["gallery-item"]}>
       <Item
@@ -69,7 +73,11 @@ export default function GalleryItem({
               {artWidth} × {artHeight} {unit}
             </p>
           )}
-          {price && <p className={classes.price}>{price && price + " €"}</p>}
+          {price && (
+            <p className={classes.price}>
+              {price && formatNumber(price) + " €"}
+            </p>
+          )}
         </div>
 
         {buyLink && (
