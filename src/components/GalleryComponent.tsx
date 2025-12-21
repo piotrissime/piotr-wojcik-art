@@ -42,6 +42,8 @@ export default function GalleryComponent({ images }: GalleryProps) {
               originalWidth={image.frontmatter.originalWidth}
               originalHeight={image.frontmatter.originalHeight}
               price={image.frontmatter.price}
+              title={image.frontmatter.title}
+              buyLink={image.frontmatter.buyLink}
             />
           ))}
         </Gallery>

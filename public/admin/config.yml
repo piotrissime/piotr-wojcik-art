@@ -58,6 +58,12 @@ collections:
           required: false,
         }
       - {
+          label: "Titre de l’œuvre.",
+          name: "title",
+          widget: "string",
+          required: false,
+        }
+      - {
           label: "Lien d’achat",
           name: "buyLink",
           widget: "string",
