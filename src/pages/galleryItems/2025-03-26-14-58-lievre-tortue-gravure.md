@@ -1,6 +1,7 @@
 ---
+imgSrc: src/assets/images/lievretortue.jpg
 name: lievre tortue gravure
 type: drawing
 alt: lievre tortue gravure
-imgSrc: src/assets/images/lievretortue.jpg
+title: Le lièvre et la tortue
 ---
