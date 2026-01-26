@@ -1,6 +1,7 @@
 ---
+imgSrc: src/assets/images/brebis.jpg
 name: gravure brebis poule
 type: drawing
 alt: gravure brebis
-imgSrc: src/assets/images/brebis.jpg
+title: La poule et la brebis
 ---
