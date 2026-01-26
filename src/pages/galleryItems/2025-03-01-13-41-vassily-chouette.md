@@ -1,6 +1,7 @@
 ---
+imgSrc: src/assets/images/blaireaulievre.jpg
 name: blaireaulievre
 type: drawing
 alt: blaireaulievre
-imgSrc: src/assets/images/blaireaulievre.jpg
+title: Le lièvre et le blaireau
 ---
