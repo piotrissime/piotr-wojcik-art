@@ -45,7 +45,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
               </a>
 
               <a
-                href="https://www.artmajeur.com/piotr-wojcik"
+                href="https://www.etsy.com/fr/shop/PiotrWojcikPeintures"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
@@ -104,7 +104,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
               </a>
 
               <a
-                href="https://www.artmajeur.com/piotr-wojcik"
+                href="https://www.etsy.com/fr/shop/PiotrWojcikPeintures"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
