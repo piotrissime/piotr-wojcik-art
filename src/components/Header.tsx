@@ -36,7 +36,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
 
             <div className="flex items-center gap-3 ml-4 pl-4 border-l border-border">
               <a
-                href="https://www.instagram.com/piotrwojcik.peintures"
+                href="https://www.instagram.com/piotrwojcik.art"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
@@ -95,7 +95,7 @@ export const Header = ({ currentPath }: { currentPath: string }) => {
 
             <div className="flex items-center gap-3 pt-2 border-t border-border">
               <a
-                href="https://www.instagram.com/piotrwojcik.peintures"
+                href="https://www.instagram.com/piotrwojcik.art"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-accent/10 p-2 rounded hover:text-accent"
